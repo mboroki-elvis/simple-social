@@ -6,10 +6,8 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 @objc(DataComments)
-public class DataComments: NSManagedObject {
-
-}
+public class DataComments: NSManagedObject {}

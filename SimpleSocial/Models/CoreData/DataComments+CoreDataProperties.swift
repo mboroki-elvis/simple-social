@@ -6,25 +6,20 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension DataComments {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<DataComments> {
+public extension DataComments {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<DataComments> {
         return NSFetchRequest<DataComments>(entityName: "DataComments")
     }
 
-    @NSManaged public var body: String?
-    @NSManaged public var email: String?
-    @NSManaged public var id: Int64
-    @NSManaged public var name: String?
-    @NSManaged public var postId: Int64
-    @NSManaged public var post: DataPosts?
-
+    @NSManaged var body: String?
+    @NSManaged var email: String?
+    @NSManaged var id: Int64
+    @NSManaged var name: String?
+    @NSManaged var postId: Int64
+    @NSManaged var post: DataPosts?
 }
 
-extension DataComments : Identifiable {
-
-}
+extension DataComments: Identifiable {}

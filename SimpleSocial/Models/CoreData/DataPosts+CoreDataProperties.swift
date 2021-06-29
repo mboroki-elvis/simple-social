@@ -6,42 +6,36 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension DataPosts {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<DataPosts> {
+public extension DataPosts {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<DataPosts> {
         return NSFetchRequest<DataPosts>(entityName: "DataPosts")
     }
 
-    @NSManaged public var body: String?
-    @NSManaged public var id: Int64
-    @NSManaged public var title: String?
-    @NSManaged public var userId: Int64
-    @NSManaged public var comments: NSSet?
-    @NSManaged public var user: DataUsers?
-
+    @NSManaged var body: String?
+    @NSManaged var id: Int64
+    @NSManaged var title: String?
+    @NSManaged var userId: Int64
+    @NSManaged var comments: NSSet?
+    @NSManaged var user: DataUsers?
 }
 
 // MARK: Generated accessors for comments
-extension DataPosts {
 
+public extension DataPosts {
     @objc(addCommentsObject:)
-    @NSManaged public func addToComments(_ value: DataComments)
+    @NSManaged func addToComments(_ value: DataComments)
 
     @objc(removeCommentsObject:)
-    @NSManaged public func removeFromComments(_ value: DataComments)
+    @NSManaged func removeFromComments(_ value: DataComments)
 
     @objc(addComments:)
-    @NSManaged public func addToComments(_ values: NSSet)
+    @NSManaged func addToComments(_ values: NSSet)
 
     @objc(removeComments:)
-    @NSManaged public func removeFromComments(_ values: NSSet)
-
+    @NSManaged func removeFromComments(_ values: NSSet)
 }
 
-extension DataPosts : Identifiable {
-
-}
+extension DataPosts: Identifiable {}

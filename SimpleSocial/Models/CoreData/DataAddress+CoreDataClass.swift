@@ -6,10 +6,8 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 @objc(DataAddress)
-public class DataAddress: NSManagedObject {
-
-}
+public class DataAddress: NSManagedObject {}

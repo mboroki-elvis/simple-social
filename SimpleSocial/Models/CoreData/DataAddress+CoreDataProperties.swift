@@ -6,26 +6,21 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension DataAddress {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<DataAddress> {
+public extension DataAddress {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<DataAddress> {
         return NSFetchRequest<DataAddress>(entityName: "DataAddress")
     }
 
-    @NSManaged public var city: String?
-    @NSManaged public var lat: String?
-    @NSManaged public var lng: String?
-    @NSManaged public var street: String?
-    @NSManaged public var suite: String?
-    @NSManaged public var zipcode: String?
-    @NSManaged public var user: DataUsers?
-
+    @NSManaged var city: String?
+    @NSManaged var lat: String?
+    @NSManaged var lng: String?
+    @NSManaged var street: String?
+    @NSManaged var suite: String?
+    @NSManaged var zipcode: String?
+    @NSManaged var user: DataUsers?
 }
 
-extension DataAddress : Identifiable {
-
-}
+extension DataAddress: Identifiable {}

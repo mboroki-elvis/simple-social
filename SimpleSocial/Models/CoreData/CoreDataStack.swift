@@ -5,11 +5,19 @@
 //  Created by Elvis Mwenda on 29/06/2021.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
-class CoreDataHelper: NSObject {
-    static var shared = CoreDataHelper()
+protocol CoreDataDelegate: AnyObject {
+    associatedtype Item
+    static func saveData(items: [Item])
+    static func getData() -> [Item]
+    static func getSingle(id: Int64) -> Item?
+}
+
+class CoreDataStack: NSObject {
+    static var shared = CoreDataStack()
+
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -18,9 +26,9 @@ class CoreDataHelper: NSObject {
             container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             if let error = error as NSError? {
                 #if DEBUG
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                    fatalError("Unresolved error \(error), \(error.userInfo)")
                 #else
-                print(error) // we should log this to sentry, crashlytics or something
+                    print(error) // we should log this to sentry, crashlytics or something
                 #endif
             }
         })
@@ -29,7 +37,7 @@ class CoreDataHelper: NSObject {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -37,17 +45,11 @@ class CoreDataHelper: NSObject {
             } catch {
                 let nserror = error as NSError
                 #if DEBUG
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 #else
-                print(error) // we should log this to sentry, crashlytics or something
+                    print(error) // we should log this to sentry, crashlytics or something
                 #endif
             }
         }
-    }
-
-    func savePosts(posts: [Post]) {
-        let context = self.persistentContainer.viewContext
-        let user = DataPosts(context: context)
-        let request = NSFetchRequest<DataPosts>()
     }
 }

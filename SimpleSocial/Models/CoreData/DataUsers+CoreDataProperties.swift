@@ -6,43 +6,37 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension DataUsers {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<DataUsers> {
+public extension DataUsers {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<DataUsers> {
         return NSFetchRequest<DataUsers>(entityName: "DataUsers")
     }
 
-    @NSManaged public var email: String?
-    @NSManaged public var id: Int64
-    @NSManaged public var name: String?
-    @NSManaged public var username: String?
-    @NSManaged public var address: DataAddress?
-    @NSManaged public var company: DataCompany?
-    @NSManaged public var posts: NSSet?
-
+    @NSManaged var email: String?
+    @NSManaged var id: Int64
+    @NSManaged var name: String?
+    @NSManaged var username: String?
+    @NSManaged var address: DataAddress?
+    @NSManaged var company: DataCompany?
+    @NSManaged var posts: NSSet?
 }
 
 // MARK: Generated accessors for posts
-extension DataUsers {
 
+public extension DataUsers {
     @objc(addPostsObject:)
-    @NSManaged public func addToPosts(_ value: DataPosts)
+    @NSManaged func addToPosts(_ value: DataPosts)
 
     @objc(removePostsObject:)
-    @NSManaged public func removeFromPosts(_ value: DataPosts)
+    @NSManaged func removeFromPosts(_ value: DataPosts)
 
     @objc(addPosts:)
-    @NSManaged public func addToPosts(_ values: NSSet)
+    @NSManaged func addToPosts(_ values: NSSet)
 
     @objc(removePosts:)
-    @NSManaged public func removeFromPosts(_ values: NSSet)
-
+    @NSManaged func removeFromPosts(_ values: NSSet)
 }
 
-extension DataUsers : Identifiable {
-
-}
+extension DataUsers: Identifiable {}
