@@ -29,6 +29,7 @@
 		EE1E25FC268B2CF800E652ED /* ApiGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25FB268B2CF800E652ED /* ApiGroup.swift */; };
 		EE521C85268B3B91007D186D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE521C84268B3B91007D186D /* PostCell.swift */; };
 		EE521C87268B3BA5007D186D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE521C86268B3BA5007D186D /* Extensions.swift */; };
+		EE623399268B5FE500B5662F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE623398268B5FE500B5662F /* CoreDataHelper.swift */; };
 		EEEB8C6A268B31AB007A4E26 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EEEB8C69268B31AB007A4E26 /* Alamofire */; };
 		EEEB8C6C268B32B8007A4E26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB8C6B268B32B8007A4E26 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		EE1E25FB268B2CF800E652ED /* ApiGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGroup.swift; sourceTree = "<group>"; };
 		EE521C84268B3B91007D186D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		EE521C86268B3BA5007D186D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EE623398268B5FE500B5662F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		EEEB8C6B268B32B8007A4E26 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +235,7 @@
 				EE521C86268B3BA5007D186D /* Extensions.swift */,
 				EE1E25FB268B2CF800E652ED /* ApiGroup.swift */,
 				EEEB8C6B268B32B8007A4E26 /* Constants.swift */,
+				EE623398268B5FE500B5662F /* CoreDataHelper.swift */,
 				EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */,
 			);
 			path = Helpers;
@@ -258,6 +261,7 @@
 				EE1E25AB268B0C5900E652ED /* Sources */,
 				EE1E25AC268B0C5900E652ED /* Frameworks */,
 				EE1E25AD268B0C5900E652ED /* Resources */,
+				EE62339A268B76BF00B5662F /* SwiftFormat Setup */,
 			);
 			buildRules = (
 			);
@@ -468,6 +472,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n   ${PODS_ROOT}/SwiftLint/swiftlint autocorrect && ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		EE62339A268B76BF00B5662F /* SwiftFormat Setup */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftFormat Setup";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -485,6 +507,7 @@
 				EE1E25B3268B0C5900E652ED /* AppDelegate.swift in Sources */,
 				EE521C87268B3BA5007D186D /* Extensions.swift in Sources */,
 				EE1E25FC268B2CF800E652ED /* ApiGroup.swift in Sources */,
+				EE623399268B5FE500B5662F /* CoreDataHelper.swift in Sources */,
 				EE1E25F2268B272B00E652ED /* Users.swift in Sources */,
 				EE1E25BD268B0C5900E652ED /* Simple_Social.xcdatamodeld in Sources */,
 				EE521C85268B3B91007D186D /* PostCell.swift in Sources */,
