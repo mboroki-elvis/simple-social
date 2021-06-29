@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE1E25B3268B0C5900E652ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25B2268B0C5900E652ED /* AppDelegate.swift */; };
+		EE1E25B7268B0C5900E652ED /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25B6268B0C5900E652ED /* HomeController.swift */; };
+		EE1E25BD268B0C5900E652ED /* Simple_Social.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25BB268B0C5900E652ED /* Simple_Social.xcdatamodeld */; };
+		EE1E25BF268B0C5B00E652ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25BE268B0C5B00E652ED /* Assets.xcassets */; };
+		EE1E25C2268B0C5B00E652ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25C0268B0C5B00E652ED /* LaunchScreen.storyboard */; };
+		EE1E25CD268B0C5B00E652ED /* Simple_SocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25CC268B0C5B00E652ED /* Simple_SocialTests.swift */; };
+		EE1E25D8268B0C5B00E652ED /* Simple_SocialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25D7268B0C5B00E652ED /* Simple_SocialUITests.swift */; };
+		EE1E25E6268B1C7C00E652ED /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */; };
+		EE1E25E8268B1E6C00E652ED /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25E7268B1E6C00E652ED /* Proxima Nova Bold.otf */; };
+		EE1E25EA268B1E9600E652ED /* Proxima Nova Condensed Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25E9268B1E9600E652ED /* Proxima Nova Condensed Light.otf */; };
+		EE1E25EC268B1EA400E652ED /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25EB268B1EA400E652ED /* ProximaNova-Regular.otf */; };
+		EE1E25EF268B26ED00E652ED /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25EE268B26ED00E652ED /* Posts.swift */; };
+		EE1E25F2268B272B00E652ED /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F1268B272A00E652ED /* Users.swift */; };
+		EE1E25F4268B275800E652ED /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F3268B275800E652ED /* Comments.swift */; };
+		EE1E25F7268B27CF00E652ED /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F6268B27CF00E652ED /* DetailsController.swift */; };
+		EE1E25F9268B28CD00E652ED /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F8268B28CD00E652ED /* ApiHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE1E25C9268B0C5B00E652ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1E25A7268B0C5900E652ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1E25AE268B0C5900E652ED;
+			remoteInfo = "Simple Social";
+		};
+		EE1E25D4268B0C5B00E652ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1E25A7268B0C5900E652ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1E25AE268B0C5900E652ED;
+			remoteInfo = "Simple Social";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE1E25AF268B0C5900E652ED /* Simple Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1E25B2268B0C5900E652ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE1E25B6268B0C5900E652ED /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		EE1E25BC268B0C5900E652ED /* Simple_Social.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simple_Social.xcdatamodel; sourceTree = "<group>"; };
+		EE1E25BE268B0C5B00E652ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE1E25C1268B0C5B00E652ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE1E25C3268B0C5B00E652ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1E25C8268B0C5B00E652ED /* Simple SocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple SocialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1E25CC268B0C5B00E652ED /* Simple_SocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_SocialTests.swift; sourceTree = "<group>"; };
+		EE1E25CE268B0C5B00E652ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1E25D3268B0C5B00E652ED /* Simple SocialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple SocialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1E25D7268B0C5B00E652ED /* Simple_SocialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_SocialUITests.swift; sourceTree = "<group>"; };
+		EE1E25D9268B0C5B00E652ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
+		EE1E25E7268B1E6C00E652ED /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		EE1E25E9268B1E9600E652ED /* Proxima Nova Condensed Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Condensed Light.otf"; sourceTree = "<group>"; };
+		EE1E25EB268B1EA400E652ED /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		EE1E25EE268B26ED00E652ED /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		EE1E25F1268B272A00E652ED /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		EE1E25F3268B275800E652ED /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		EE1E25F6268B27CF00E652ED /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
+		EE1E25F8268B28CD00E652ED /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE1E25AC268B0C5900E652ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1E25C5268B0C5B00E652ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1E25D0268B0C5B00E652ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE1E25A6268B0C5900E652ED = {
+			isa = PBXGroup;
+			children = (
+				EE1E25B1268B0C5900E652ED /* Simple Social */,
+				EE1E25CB268B0C5B00E652ED /* Simple SocialTests */,
+				EE1E25D6268B0C5B00E652ED /* Simple SocialUITests */,
+				EE1E25B0268B0C5900E652ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE1E25B0268B0C5900E652ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25AF268B0C5900E652ED /* Simple Social.app */,
+				EE1E25C8268B0C5B00E652ED /* Simple SocialTests.xctest */,
+				EE1E25D3268B0C5B00E652ED /* Simple SocialUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE1E25B1268B0C5900E652ED /* Simple Social */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25ED268B1EAC00E652ED /* Fonts */,
+				EE1E25FA268B28D400E652ED /* Helpers */,
+				EE1E25F0268B26F600E652ED /* Models */,
+				EE1E25F5268B276F00E652ED /* Controllers */,
+				EE1E25B2268B0C5900E652ED /* AppDelegate.swift */,
+				EE1E25BE268B0C5B00E652ED /* Assets.xcassets */,
+				EE1E25C0268B0C5B00E652ED /* LaunchScreen.storyboard */,
+				EE1E25C3268B0C5B00E652ED /* Info.plist */,
+				EE1E25BB268B0C5900E652ED /* Simple_Social.xcdatamodeld */,
+			);
+			path = "Simple Social";
+			sourceTree = "<group>";
+		};
+		EE1E25CB268B0C5B00E652ED /* Simple SocialTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25CC268B0C5B00E652ED /* Simple_SocialTests.swift */,
+				EE1E25CE268B0C5B00E652ED /* Info.plist */,
+			);
+			path = "Simple SocialTests";
+			sourceTree = "<group>";
+		};
+		EE1E25D6268B0C5B00E652ED /* Simple SocialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25D7268B0C5B00E652ED /* Simple_SocialUITests.swift */,
+				EE1E25D9268B0C5B00E652ED /* Info.plist */,
+			);
+			path = "Simple SocialUITests";
+			sourceTree = "<group>";
+		};
+		EE1E25ED268B1EAC00E652ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25E7268B1E6C00E652ED /* Proxima Nova Bold.otf */,
+				EE1E25E9268B1E9600E652ED /* Proxima Nova Condensed Light.otf */,
+				EE1E25EB268B1EA400E652ED /* ProximaNova-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EE1E25F0268B26F600E652ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25EE268B26ED00E652ED /* Posts.swift */,
+				EE1E25F1268B272A00E652ED /* Users.swift */,
+				EE1E25F3268B275800E652ED /* Comments.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE1E25F5268B276F00E652ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25B6268B0C5900E652ED /* HomeController.swift */,
+				EE1E25F6268B27CF00E652ED /* DetailsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE1E25FA268B28D400E652ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E25F8268B28CD00E652ED /* ApiHelper.swift */,
+				EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE1E25AE268B0C5900E652ED /* Simple Social */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1E25DC268B0C5B00E652ED /* Build configuration list for PBXNativeTarget "Simple Social" */;
+			buildPhases = (
+				EE1E25AB268B0C5900E652ED /* Sources */,
+				EE1E25AC268B0C5900E652ED /* Frameworks */,
+				EE1E25AD268B0C5900E652ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Social";
+			productName = "Simple Social";
+			productReference = EE1E25AF268B0C5900E652ED /* Simple Social.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE1E25C7268B0C5B00E652ED /* Simple SocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1E25DF268B0C5B00E652ED /* Build configuration list for PBXNativeTarget "Simple SocialTests" */;
+			buildPhases = (
+				EE1E25C4268B0C5B00E652ED /* Sources */,
+				EE1E25C5268B0C5B00E652ED /* Frameworks */,
+				EE1E25C6268B0C5B00E652ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1E25CA268B0C5B00E652ED /* PBXTargetDependency */,
+			);
+			name = "Simple SocialTests";
+			productName = "Simple SocialTests";
+			productReference = EE1E25C8268B0C5B00E652ED /* Simple SocialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE1E25D2268B0C5B00E652ED /* Simple SocialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1E25E2268B0C5B00E652ED /* Build configuration list for PBXNativeTarget "Simple SocialUITests" */;
+			buildPhases = (
+				EE1E25CF268B0C5B00E652ED /* Sources */,
+				EE1E25D0268B0C5B00E652ED /* Frameworks */,
+				EE1E25D1268B0C5B00E652ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1E25D5268B0C5B00E652ED /* PBXTargetDependency */,
+			);
+			name = "Simple SocialUITests";
+			productName = "Simple SocialUITests";
+			productReference = EE1E25D3268B0C5B00E652ED /* Simple SocialUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE1E25A7268B0C5900E652ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					EE1E25AE268B0C5900E652ED = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					EE1E25C7268B0C5B00E652ED = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = EE1E25AE268B0C5900E652ED;
+					};
+					EE1E25D2268B0C5B00E652ED = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = EE1E25AE268B0C5900E652ED;
+					};
+				};
+			};
+			buildConfigurationList = EE1E25AA268B0C5900E652ED /* Build configuration list for PBXProject "Simple Social" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE1E25A6268B0C5900E652ED;
+			productRefGroup = EE1E25B0268B0C5900E652ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE1E25AE268B0C5900E652ED /* Simple Social */,
+				EE1E25C7268B0C5B00E652ED /* Simple SocialTests */,
+				EE1E25D2268B0C5B00E652ED /* Simple SocialUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE1E25AD268B0C5900E652ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1E25EA268B1E9600E652ED /* Proxima Nova Condensed Light.otf in Resources */,
+				EE1E25EC268B1EA400E652ED /* ProximaNova-Regular.otf in Resources */,
+				EE1E25E8268B1E6C00E652ED /* Proxima Nova Bold.otf in Resources */,
+				EE1E25C2268B0C5B00E652ED /* LaunchScreen.storyboard in Resources */,
+				EE1E25BF268B0C5B00E652ED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1E25C6268B0C5B00E652ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1E25D1268B0C5B00E652ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE1E25AB268B0C5900E652ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1E25B7268B0C5900E652ED /* HomeController.swift in Sources */,
+				EE1E25E6268B1C7C00E652ED /* StyleHelper.swift in Sources */,
+				EE1E25EF268B26ED00E652ED /* Posts.swift in Sources */,
+				EE1E25F9268B28CD00E652ED /* ApiHelper.swift in Sources */,
+				EE1E25F4268B275800E652ED /* Comments.swift in Sources */,
+				EE1E25F7268B27CF00E652ED /* DetailsController.swift in Sources */,
+				EE1E25B3268B0C5900E652ED /* AppDelegate.swift in Sources */,
+				EE1E25F2268B272B00E652ED /* Users.swift in Sources */,
+				EE1E25BD268B0C5900E652ED /* Simple_Social.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1E25C4268B0C5B00E652ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1E25CD268B0C5B00E652ED /* Simple_SocialTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1E25CF268B0C5B00E652ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1E25D8268B0C5B00E652ED /* Simple_SocialUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE1E25CA268B0C5B00E652ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1E25AE268B0C5900E652ED /* Simple Social */;
+			targetProxy = EE1E25C9268B0C5B00E652ED /* PBXContainerItemProxy */;
+		};
+		EE1E25D5268B0C5B00E652ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1E25AE268B0C5900E652ED /* Simple Social */;
+			targetProxy = EE1E25D4268B0C5B00E652ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE1E25C0268B0C5B00E652ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE1E25C1268B0C5B00E652ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE1E25DA268B0C5B00E652ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE1E25DB268B0C5B00E652ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE1E25DD268B0C5B00E652ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5E66Q9HX8;
+				INFOPLIST_FILE = "Simple Social/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azenia.Simple-Social";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE1E25DE268B0C5B00E652ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5E66Q9HX8;
+				INFOPLIST_FILE = "Simple Social/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azenia.Simple-Social";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE1E25E0268B0C5B00E652ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5E66Q9HX8;
+				INFOPLIST_FILE = "Simple SocialTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azenia.Simple-SocialTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Social.app/Simple Social";
+			};
+			name = Debug;
+		};
+		EE1E25E1268B0C5B00E652ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5E66Q9HX8;
+				INFOPLIST_FILE = "Simple SocialTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azenia.Simple-SocialTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Social.app/Simple Social";
+			};
+			name = Release;
+		};
+		EE1E25E3268B0C5B00E652ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5E66Q9HX8;
+				INFOPLIST_FILE = "Simple SocialUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azenia.Simple-SocialUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Simple Social";
+			};
+			name = Debug;
+		};
+		EE1E25E4268B0C5B00E652ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5E66Q9HX8;
+				INFOPLIST_FILE = "Simple SocialUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azenia.Simple-SocialUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Simple Social";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE1E25AA268B0C5900E652ED /* Build configuration list for PBXProject "Simple Social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1E25DA268B0C5B00E652ED /* Debug */,
+				EE1E25DB268B0C5B00E652ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1E25DC268B0C5B00E652ED /* Build configuration list for PBXNativeTarget "Simple Social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1E25DD268B0C5B00E652ED /* Debug */,
+				EE1E25DE268B0C5B00E652ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1E25DF268B0C5B00E652ED /* Build configuration list for PBXNativeTarget "Simple SocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1E25E0268B0C5B00E652ED /* Debug */,
+				EE1E25E1268B0C5B00E652ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1E25E2268B0C5B00E652ED /* Build configuration list for PBXNativeTarget "Simple SocialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1E25E3268B0C5B00E652ED /* Debug */,
+				EE1E25E4268B0C5B00E652ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE1E25BB268B0C5900E652ED /* Simple_Social.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE1E25BC268B0C5900E652ED /* Simple_Social.xcdatamodel */,
+			);
+			currentVersion = EE1E25BC268B0C5900E652ED /* Simple_Social.xcdatamodel */;
+			path = Simple_Social.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EE1E25A7268B0C5900E652ED /* Project object */;
+}
