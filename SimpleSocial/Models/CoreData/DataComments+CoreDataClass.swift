@@ -52,17 +52,20 @@ public class DataComments: NSManagedObject, CoreDataDelegate {
         return nil
     }
 
-    static func getController(postId: Int64) -> NSFetchedResultsController<DataComments>? {
+    static func getComments(postId: Int64) -> [DataComments]? {
         let moc = CoreDataStack.shared.persistentContainer.viewContext
         let entityDescription = NSEntityDescription.entity(forEntityName: "DataComments", in: moc)
         let predicate = NSPredicate(format: "postId = %@", argumentArray: [postId])
         let request: NSFetchRequest<DataComments> = DataComments.fetchRequest()
         request.predicate = predicate
         request.entity = entityDescription
-        request.fetchBatchSize = 10
         let systemTimeSort = NSSortDescriptor(key: "id", ascending: true)
         request.sortDescriptors = [systemTimeSort]
-        let controller = NSFetchedResultsController<DataComments>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: "DataComments")
-        return controller
+        do {
+            return try moc.fetch(request)
+        } catch {
+            print(error)
+        }
+        return nil
     }
 }

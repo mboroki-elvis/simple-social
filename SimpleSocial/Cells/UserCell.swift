@@ -13,6 +13,7 @@ class UserCell: UITableViewCell {
             guard let source = dataSourceItem else {
                 return
             }
+            debugPrint(source.company)
             contactView.dataSourceItem = source
             addressView.dataSourceItem = source.address
             companyView.dataSourceItem = source.company
@@ -43,6 +44,8 @@ class UserCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(contactView)
+        contentView.addSubview(addressView)
+        contentView.addSubview(companyView)
         let contraints = [
             contactView.topAnchor.constraint(equalTo: contentView.topAnchor),
             contactView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -50,14 +53,14 @@ class UserCell: UITableViewCell {
             contactView.bottomAnchor.constraint(equalTo: addressView.topAnchor, constant: -Constants.defaultPadding),
 
             addressView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: Constants.defaultPadding),
-            addressView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            addressView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            addressView.bottomAnchor.constraint(equalTo: contactView.topAnchor, constant: -Constants.defaultPadding),
+            addressView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.defaultPadding),
+            addressView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.defaultPadding),
+            addressView.bottomAnchor.constraint(equalTo: companyView.topAnchor, constant: -Constants.defaultPadding),
 
-            contactView.topAnchor.constraint(equalTo: addressView.bottomAnchor, constant: Constants.defaultPadding),
-            contactView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            contactView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            contactView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            companyView.topAnchor.constraint(equalTo: addressView.bottomAnchor, constant: Constants.defaultPadding),
+            companyView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.defaultPadding),
+            companyView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.defaultPadding),
+            companyView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ]
         NSLayoutConstraint.activate(contraints)
     }

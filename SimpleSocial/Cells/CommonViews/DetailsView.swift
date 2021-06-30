@@ -20,32 +20,40 @@ class DetailsView: UIView {
 
     let nameButton: ButtonWithImage = {
         let button = ButtonWithImage()
+        button.setImage(#imageLiteral(resourceName: "icon-name").withRenderingMode(.alwaysTemplate), for: .normal)
         button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
         button.titleLabel?.font = StyleHelper.defaultFont
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     let emailButton: ButtonWithImage = {
         let button = ButtonWithImage()
+        button.setImage(#imageLiteral(resourceName: "icon-email").withRenderingMode(.alwaysTemplate), for: .normal)
         button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
         button.titleLabel?.font = StyleHelper.defaultFont
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     let phoneButton: ButtonWithImage = {
         let button = ButtonWithImage()
+        button.setImage(#imageLiteral(resourceName: "icon-phone").withRenderingMode(.alwaysTemplate), for: .normal)
         button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
         button.titleLabel?.font = StyleHelper.defaultFont
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     let websiteButton: ButtonWithImage = {
         let button = ButtonWithImage()
+        button.setImage(#imageLiteral(resourceName: "icon-website").withRenderingMode(.alwaysTemplate), for: .normal)
         button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
         button.titleLabel?.font = StyleHelper.defaultFont
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -63,19 +71,19 @@ class DetailsView: UIView {
             nameButton.trailingAnchor.constraint(equalTo: emailButton.leadingAnchor),
             nameButton.bottomAnchor.constraint(equalTo: phoneButton.topAnchor, constant: -Constants.defaultPadding),
 
-            emailButton.topAnchor.constraint(equalTo: topAnchor),
+            emailButton.topAnchor.constraint(equalTo: nameButton.topAnchor),
             emailButton.widthAnchor.constraint(equalTo: nameButton.widthAnchor),
             emailButton.leadingAnchor.constraint(equalTo: nameButton.trailingAnchor),
             emailButton.trailingAnchor.constraint(equalTo: trailingAnchor),
             emailButton.bottomAnchor.constraint(equalTo: nameButton.bottomAnchor),
 
-            phoneButton.topAnchor.constraint(equalTo: topAnchor),
+            phoneButton.topAnchor.constraint(equalTo: nameButton.bottomAnchor, constant: Constants.defaultPadding),
             phoneButton.leadingAnchor.constraint(equalTo: leadingAnchor),
             phoneButton.widthAnchor.constraint(equalTo: websiteButton.widthAnchor),
             phoneButton.trailingAnchor.constraint(equalTo: websiteButton.leadingAnchor),
             phoneButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.defaultPadding),
 
-            websiteButton.topAnchor.constraint(equalTo: topAnchor),
+            websiteButton.topAnchor.constraint(equalTo: phoneButton.topAnchor),
             websiteButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
             websiteButton.leadingAnchor.constraint(equalTo: phoneButton.trailingAnchor),
             websiteButton.trailingAnchor.constraint(equalTo: trailingAnchor),

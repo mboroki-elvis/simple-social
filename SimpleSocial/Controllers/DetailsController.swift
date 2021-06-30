@@ -17,30 +17,35 @@ class DetailsController: UITableViewController {
         case comments
     }
 
+    enum Wrapper: Hashable {
+        case one(DataPosts)
+        case two(DataUsers)
+        case three([DataComments])
+    }
+
     private var post: DataPosts?
     private var user: DataUsers?
-    typealias DataSource = UITableViewDiffableDataSource<Section, AnyHashable>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, AnyHashable>
-    private var fetchedResultsController: NSFetchedResultsController<DataComments>?
+    typealias DataSource = UITableViewDiffableDataSource<Section, Wrapper>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Wrapper>
     private lazy var dataSource: DataSource = {
-        DataSource(tableView: tableView, cellProvider: { [weak self] _, indexPath, _ -> UITableViewCell? in
+        DataSource(tableView: tableView, cellProvider: { [weak self] _, indexPath, item -> UITableViewCell? in
+            debugPrint("item: \(item)")
             guard let self = self else { return nil }
-            switch indexPath.section {
-            case 0:
+            debugPrint("item: \(item)")
+            switch item {
+            case let .one(post):
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
-                cell?.dataSourceItem = self.post
+                cell?.dataSourceItem = post
                 return cell
-            case 1:
+            case let .two(user):
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.identifier, for: indexPath) as? UserCell
-                cell?.dataSourceItem = self.user
+                cell?.dataSourceItem = user
                 cell?.addressView.mapView.delegate = self
                 return cell
-            case 2:
+            case let .three(comments):
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as? CommentCell
-                cell?.dataSourceItem = self.fetchedResultsController?.object(at: indexPath)
+                cell?.dataSourceItem = comments[indexPath.item]
                 return cell
-            default:
-                return nil
             }
         })
     }()
@@ -48,13 +53,16 @@ class DetailsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource
+        debugPrint(dataSource)
+        tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.identifier)
+        tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.identifier)
+        tableView.register(CommentCell.self, forCellReuseIdentifier: CommentCell.identifier)
     }
 
     required init(item: DataPosts) {
         super.init(style: .plain)
         post = item
         applySnapshot(animatingDifferences: true)
-        handleSetupResultsController(item)
         debugPrint(item)
         getUser(item: item)
         getComments(item: item)
@@ -70,17 +78,16 @@ class DetailsController: UITableViewController {
         snapshot.appendSections([.description])
         snapshot.appendSections([.user])
         snapshot.appendSections([.comments])
+        snapshot.appendItems([Wrapper.one(post!)], toSection: .description)
         debugPrint(snapshot.numberOfSections)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
-    private func handleSetupResultsController(_ item: DataPosts) {
-        fetchedResultsController = DataComments.getController(postId: item.id)
-        fetchedResultsController?.delegate = self
-        do {
-            try fetchedResultsController?.performFetch()
-        } catch {
-            print(error)
+    fileprivate func updateUser() {
+        if let user = user {
+            var snapshot = dataSource.snapshot()
+            snapshot.appendItems([Wrapper.two(user)], toSection: .user)
+            dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
         }
     }
 
@@ -92,6 +99,8 @@ class DetailsController: UITableViewController {
                     do {
                         let user = try JSONDecoder().decode(User.self, from: data)
                         DataUsers.saveData(items: [user])
+                        self.user = DataUsers.getSingle(id: item.userId)
+                        self.updateUser()
                     } catch {
                         print(error)
                     }
@@ -99,17 +108,18 @@ class DetailsController: UITableViewController {
                     print(error)
                 }
             }
+        } else {
+            updateUser()
         }
     }
 
     private func getComments(item: DataPosts) {
-        if let controller = fetchedResultsController {
-            if controller.fetchedObjects?.count == .zero {
-                getData(item)
-                debugPrint("this is the item")
-            } else {
-                debugPrint("coredata: \(String(describing: controller.fetchedObjects?.count))")
-            }
+        if let comments = item.comments?.allObjects as? [DataComments] {
+            var snapshot = dataSource.snapshot()
+            snapshot.appendItems([Wrapper.three(comments)], toSection: .comments)
+            dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+        } else {
+            getData(item)
         }
     }
 
@@ -130,7 +140,7 @@ class DetailsController: UITableViewController {
 
     override func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = HeaderLabel()
-        label.text = ["", "User Details", "Comments"][section]
+        label.text = ["", "Contact Details", "Comments"][section]
         label.textColor = StyleHelper.itemTintColor
         label.font = StyleHelper.defaultBoldFont
         label.textAlignment = .left
@@ -144,14 +154,6 @@ class DetailsController: UITableViewController {
         label.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Constants.defaultPadding).isActive = true
         label.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -Constants.defaultPadding).isActive = true
         return containerView
-    }
-}
-
-extension DetailsController: NSFetchedResultsControllerDelegate {
-    func controller(_: NSFetchedResultsController<NSFetchRequestResult>, didChangeContentWith snapshot: NSDiffableDataSourceSnapshotReference) {
-//        let snapshot = snapshot as Snapshot
-//        debugPrint(snapshot.numberOfSections)
-//        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 
