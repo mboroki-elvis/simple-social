@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Post
 
 struct Post: Codable, Hashable {
-    let userID, id: Int
+    let userID, id: Int64
     let title, body: String
 
     enum CodingKeys: String, CodingKey {

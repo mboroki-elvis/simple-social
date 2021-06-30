@@ -6,9 +6,9 @@
 //  Copyright © 2021 WUNI. All rights reserved.
 //
 
- import UIKit
+import UIKit
 
- public enum StyleHelper {
+public enum StyleHelper {
     static var itemTintColor: UIColor = {
         if #available(iOS 13, *) {
             return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
@@ -24,7 +24,7 @@
     }()
 
     static var backgroundColor: UIColor = {
-        return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
+        UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
             if UITraitCollection.userInterfaceStyle == .dark {
                 return .black
             } else {
@@ -46,4 +46,4 @@
         UITableView.appearance().backgroundColor = backgroundColor
         UICollectionView.appearance().backgroundColor = backgroundColor
     }
- }
+}

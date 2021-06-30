@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Comment
 
 struct Comment: Codable {
-    let postID, id: Int
+    let postID, id: Int64
     let name, email, body: String
 
     enum CodingKeys: String, CodingKey {

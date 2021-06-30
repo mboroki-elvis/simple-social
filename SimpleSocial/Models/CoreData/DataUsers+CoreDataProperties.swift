@@ -17,7 +17,9 @@ public extension DataUsers {
     @NSManaged var email: String?
     @NSManaged var id: Int64
     @NSManaged var name: String?
+    @NSManaged var phone: String?
     @NSManaged var username: String?
+    @NSManaged var website: String?
     @NSManaged var address: DataAddress?
     @NSManaged var company: DataCompany?
     @NSManaged var posts: NSSet?

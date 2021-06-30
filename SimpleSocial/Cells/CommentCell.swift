@@ -1,20 +1,19 @@
 //
-//  PostCell.swift
-//  Simple Social
+//  CommentCell.swift
+//  SimpleSocial
 //
-//  Created by Elvis Mwenda on 29/06/2021.
+//  Created by Elvis Mwenda on 30/06/2021.
 //
 
 import UIKit
 
-class PostCell: UITableViewCell {
-    var dataSourceItem: DataPosts? {
+class CommentCell: UITableViewCell {
+    var dataSourceItem: DataComments? {
         didSet {
             guard let source = dataSourceItem else {
                 return
             }
-            debugPrint(source.title)
-            textLabel?.text = source.title
+            textLabel?.text = source.name
             detailTextLabel?.text = source.body
         }
     }

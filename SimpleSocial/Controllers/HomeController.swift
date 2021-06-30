@@ -108,14 +108,7 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
 
 extension HomeController: NSFetchedResultsControllerDelegate {
     func controller(_: NSFetchedResultsController<NSFetchRequestResult>, didChangeContentWith snapshot: NSDiffableDataSourceSnapshotReference) {
-        guard let dataSource = tableView?.dataSource as? DataSource else {
-            fatalError("The data source has not implemented snapshot support while it should")
-        }
         let snapshot = snapshot as Snapshot
-        self.dataSource.apply(snapshot, animatingDifferences: false)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
-}
-
-extension HomeController: UITableViewDataSourcePrefetching {
-    func tableView(_: UITableView, prefetchRowsAt _: [IndexPath]) {}
 }

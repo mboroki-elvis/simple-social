@@ -10,9 +10,10 @@ import UIKit
 
 protocol CoreDataDelegate: AnyObject {
     associatedtype Item
+    associatedtype DataType
     static func saveData(items: [Item])
-    static func getData() -> [Item]
-    static func getSingle(id: Int64) -> Item?
+    static func getData() -> [DataType]
+    static func getSingle(id: Int64) -> DataType?
 }
 
 class CoreDataStack: NSObject {

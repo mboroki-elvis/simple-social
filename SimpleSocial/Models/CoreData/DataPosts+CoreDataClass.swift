@@ -12,6 +12,7 @@ import Foundation
 @objc(DataPosts)
 public class DataPosts: NSManagedObject, CoreDataDelegate {
     typealias Item = Post
+    typealias DataType = DataPosts
     static func saveData(items: [Post]) {
         let moc = CoreDataStack.shared.persistentContainer.viewContext
         for item in items {
@@ -21,18 +22,14 @@ public class DataPosts: NSManagedObject, CoreDataDelegate {
             user.id = Int64(item.id)
             user.userId = Int64(item.userID)
         }
-        do {
-            try moc.save()
-        } catch {
-            print(error)
-        }
+        CoreDataStack.shared.saveContext()
     }
 
-    static func getData() -> [Post] {
+    static func getData() -> [DataPosts] {
         return []
     }
 
-    static func getSingle(id: Int64) -> Post? {
+    static func getSingle(id: Int64) -> DataPosts? {
         let moc = CoreDataStack.shared.persistentContainer.viewContext
         let entityDescription = NSEntityDescription.entity(forEntityName: "DataPosts", in: moc)
         let predicate = NSPredicate(format: "id = %@", argumentArray: [id])
@@ -42,9 +39,7 @@ public class DataPosts: NSManagedObject, CoreDataDelegate {
         request.fetchLimit = 1
         do {
             let results = try moc.fetch(request)
-            if let message = results.last, let title = message.title, let body = message.body {
-                return Post(userID: Int(message.userId), id: Int(message.id), title: title, body: body)
-            }
+            return results.last
         } catch {
             print(error)
         }

@@ -5,8 +5,8 @@
 //  Created by Elvis Mwenda on 29/06/2021.
 //
 
-import XCTest
 @testable import SimpleSocial
+import XCTest
 
 class SimpleSocialTests: XCTestCase {
     override func setUpWithError() throws {
@@ -24,7 +24,7 @@ class SimpleSocialTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
