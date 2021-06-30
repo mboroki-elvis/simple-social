@@ -34,19 +34,17 @@ class DetailsController: UITableViewController {
             debugPrint("item: \(item)")
             switch item {
             case let .one(post):
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier,
-                                                              for: indexPath) as? PostCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
                 cell?.dataSourceItem = post
                 return cell
             case let .two(user):
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.identifier,
-                                                              for: indexPath) as? UserCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.identifier, for: indexPath) as? UserCell
                 cell?.dataSourceItem = user
+                cell?.contactView.delegate = self
                 cell?.addressView.mapView.delegate = self
                 return cell
             case let .three(comments):
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier,
-                                                              for: indexPath) as? CommentCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as? CommentCell
                 cell?.dataSourceItem = comments[indexPath.item]
                 return cell
             }
@@ -56,17 +54,16 @@ class DetailsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource
-        debugPrint(dataSource)
+        tableView.tableFooterView = UIView()
         tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.identifier)
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.identifier)
         tableView.register(CommentCell.self, forCellReuseIdentifier: CommentCell.identifier)
     }
 
     required init(item: DataPosts) {
-        super.init(style: .plain)
+        super.init(style: .grouped)
         post = item
         applySnapshot(animatingDifferences: true)
-        debugPrint(item)
         getUser(item: item)
         getComments(item: item)
     }
@@ -82,7 +79,6 @@ class DetailsController: UITableViewController {
         snapshot.appendSections([.user])
         snapshot.appendSections([.comments])
         snapshot.appendItems([Wrapper.one(post!)], toSection: .description)
-        debugPrint(snapshot.numberOfSections)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
@@ -97,7 +93,7 @@ class DetailsController: UITableViewController {
     private func getUser(item: DataPosts) {
         user = DataUsers.getSingle(id: item.userId)
         if user == nil {
-            Networking.shared.get(group: .users(.single, item.id.description)) { data, error in
+            Networking.shared.get(group: .users(.single, item.userId.description)) { data, error in
                 if let data = data {
                     do {
                         let user = try JSONDecoder().decode(User.self, from: data)
@@ -105,7 +101,7 @@ class DetailsController: UITableViewController {
                         self.user = DataUsers.getSingle(id: item.userId)
                         self.updateUser()
                     } catch {
-                        print(error)
+                        Logger.shared.log(error)
                     }
                 } else if let error = error {
                     print(error)
@@ -133,7 +129,7 @@ class DetailsController: UITableViewController {
                     let comments = try JSONDecoder().decode(Comments.self, from: data)
                     DataComments.saveData(items: comments)
                 } catch {
-                    print(error)
+                    Logger.shared.log(error)
                 }
             } else if let error = error {
                 print(error)
@@ -142,22 +138,56 @@ class DetailsController: UITableViewController {
     }
 
     override func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == .zero {
+            return nil
+        }
         let label = HeaderLabel()
         label.text = ["", "Contact Details", "Comments"][section]
         label.textColor = StyleHelper.itemTintColor
         label.font = StyleHelper.defaultBoldFont
         label.textAlignment = .left
-        label.backgroundColor = StyleHelper.backgroundColor
+        label.backgroundColor = .systemGroupedBackground
         label.translatesAutoresizingMaskIntoConstraints = false
         let containerView = UIView()
         containerView.addSubview(label)
-        containerView.backgroundColor = StyleHelper.backgroundColor
+        containerView.backgroundColor = .systemGroupedBackground
         label.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: Constants.doublePadding).isActive = true
         label.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -Constants.doublePadding).isActive = true
         label.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Constants.defaultPadding).isActive = true
         label.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -Constants.defaultPadding).isActive = true
         return containerView
     }
-}
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == .zero ? .leastNonzeroMagnitude : UITableView.automaticDimension
+    }
+}
+extension DetailsController: UserActionDelegate {
+    func didSelectItem(action: UserAction) {
+        guard let user = user else {
+            return
+        }
+        switch action {
+        case .name:
+            if let name = user.name {
+                let activityViewController = UIActivityViewController(activityItems: ["@\(name)"], applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = view
+                activityViewController.excludedActivityTypes = []
+                present(activityViewController, animated: true, completion: nil)
+            }
+        case .email:
+            if let email = user.email, let url = URL(string: "mailto://\(email)"), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        case .phone:
+            if let phone = user.phone, let url = URL(string: "tel://\(phone)"), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        case .website:
+            if let website = user.website, let url = URL(string: website) {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
+}
 extension DetailsController: MKMapViewDelegate, CLLocationManagerDelegate {}

@@ -74,22 +74,21 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
         do {
             try fetchedResultsController?.performFetch()
         } catch {
-            print(error)
+            Logger.shared.log(error)
         }
     }
 
-    fileprivate func getData() {
+    private func getData() {
         Networking.shared.get(group: .posts(.all, "")) { data, error in
             if let data = data {
                 do {
                     let posts = try JSONDecoder().decode(Posts.self, from: data)
                     DataPosts.saveData(items: posts)
-                    debugPrint(posts.count)
                 } catch {
-                    print(error)
+                    Logger.shared.log(error)
                 }
             } else if let error = error {
-                print(error)
+                Logger.shared.log(error)
             }
         }
     }
@@ -98,9 +97,6 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
         if let controller = fetchedResultsController {
             if controller.fetchedObjects?.count == .zero {
                 getData()
-                debugPrint("this is the item")
-            } else {
-                debugPrint("coredata: \(String(describing: controller.fetchedObjects?.count))")
             }
         }
     }

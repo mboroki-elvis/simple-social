@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum UserAction: Int {
+    case name = 0, email, phone, website
+}
+
+protocol UserActionDelegate: AnyObject {
+    func didSelectItem(action: UserAction)
+}
+
 class UserCell: UITableViewCell {
     var dataSourceItem: DataUsers? {
         didSet {

@@ -47,7 +47,7 @@ public class DataComments: NSManagedObject, CoreDataDelegate {
             let results = try moc.fetch(request)
             return results.last
         } catch {
-            print(error)
+            Logger.shared.log(error)
         }
         return nil
     }
@@ -64,7 +64,7 @@ public class DataComments: NSManagedObject, CoreDataDelegate {
         do {
             return try moc.fetch(request)
         } catch {
-            print(error)
+            Logger.shared.log(error)
         }
         return nil
     }

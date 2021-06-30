@@ -8,52 +8,49 @@
 import UIKit
 
 class DetailsView: UIView {
+    weak var delegate: UserActionDelegate?
     var dataSourceItem: DataUsers? {
         didSet {
             guard let source = dataSourceItem else { return }
-            nameButton.setTitle(source.name, for: .normal)
-            emailButton.setTitle(source.email, for: .normal)
-            phoneButton.setTitle(source.phone, for: .normal)
-            websiteButton.setTitle(source.website, for: .normal)
+            nameButton.titleLabel.text = source.name
+            emailButton.titleLabel.text = source.email
+            phoneButton.titleLabel.text = source.phone
+            websiteButton.titleLabel.text = source.website
         }
     }
 
-    let nameButton: ButtonWithImage = {
-        let button = ButtonWithImage()
-        button.setImage(#imageLiteral(resourceName: "icon-name").withRenderingMode(.alwaysTemplate), for: .normal)
-        button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
-        button.titleLabel?.font = StyleHelper.defaultFont
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
+    lazy var nameButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.name.rawValue
+        button.selectImage.image = #imageLiteral(resourceName: "icon-name").withRenderingMode(.alwaysTemplate)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
-    let emailButton: ButtonWithImage = {
-        let button = ButtonWithImage()
-        button.setImage(#imageLiteral(resourceName: "icon-email").withRenderingMode(.alwaysTemplate), for: .normal)
-        button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
-        button.titleLabel?.font = StyleHelper.defaultFont
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
+    lazy var emailButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.email.rawValue
+        button.selectImage.image = #imageLiteral(resourceName: "icon-email").withRenderingMode(.alwaysTemplate)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
-    let phoneButton: ButtonWithImage = {
-        let button = ButtonWithImage()
-        button.setImage(#imageLiteral(resourceName: "icon-phone").withRenderingMode(.alwaysTemplate), for: .normal)
-        button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
-        button.titleLabel?.font = StyleHelper.defaultFont
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
+    lazy var phoneButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.phone.rawValue
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
+        button.selectImage.image = #imageLiteral(resourceName: "icon-phone").withRenderingMode(.alwaysTemplate)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
-    let websiteButton: ButtonWithImage = {
-        let button = ButtonWithImage()
-        button.setImage(#imageLiteral(resourceName: "icon-website").withRenderingMode(.alwaysTemplate), for: .normal)
-        button.setTitleColor(StyleHelper.itemTintColor, for: .normal)
-        button.titleLabel?.font = StyleHelper.defaultFont
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
+    lazy var websiteButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.website.rawValue
+        button.selectImage.image = #imageLiteral(resourceName: "icon-website").withRenderingMode(.alwaysTemplate)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -95,5 +92,13 @@ class DetailsView: UIView {
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    @objc private func doAction(sender: UITapGestureRecognizer) {
+        guard let view = sender.view, let action = UserAction(rawValue: view.tag) else {
+            return
+        }
+        debugPrint(action)
+        delegate?.didSelectItem(action: action)
     }
 }

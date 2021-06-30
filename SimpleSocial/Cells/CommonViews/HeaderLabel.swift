@@ -17,21 +17,3 @@ class HeaderLabel: UILabel {
         return CGSize(width: orginialContentSize.width + 10, height: height)
     }
 }
-
-class ButtonWithImage: UIButton {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if imageView != nil {
-            imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
-        }
-    }
-
-    override var intrinsicContentSize: CGSize {
-        let orginialContentSize = super.intrinsicContentSize
-        let height = orginialContentSize.height + 10
-        layer.cornerRadius = height / 2
-        layer.masksToBounds = true
-        return CGSize(width: orginialContentSize.width + 10, height: height)
-    }
-}
