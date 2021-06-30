@@ -57,4 +57,17 @@ public class DataPosts: NSManagedObject, CoreDataDelegate {
         let controller = NSFetchedResultsController<DataPosts>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: "DataPosts")
         return controller
     }
+
+    static func search(term: String) -> NSFetchedResultsController<DataPosts>? {
+        let moc = CoreDataStack.shared.persistentContainer.viewContext
+        let entityDescription = NSEntityDescription.entity(forEntityName: "DataPosts", in: moc)
+        let request: NSFetchRequest<DataPosts> = DataPosts.fetchRequest()
+        request.entity = entityDescription
+        request.fetchBatchSize = 10
+        let systemTimeSort = NSSortDescriptor(key: "id", ascending: true)
+        request.sortDescriptors = [systemTimeSort]
+        request.predicate = NSPredicate(format: "(title contains[cd] %@) || (body contains[cd] %@)", term, term)
+        let controller = NSFetchedResultsController<DataPosts>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        return controller
+    }
 }

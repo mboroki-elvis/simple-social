@@ -10,15 +10,6 @@ import MapKit
 import UIKit
 
 class AddressDetailsView: UIView {
-    var dataSourceItem: DataAddress? {
-        didSet {
-            guard let source = dataSourceItem else {
-                return
-            }
-            debugPrint(source)
-        }
-    }
-
     lazy var mapView: MKMapView = {
         let map = MKMapView()
         map.showsCompass = true

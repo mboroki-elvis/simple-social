@@ -23,7 +23,6 @@ class UserCell: UITableViewCell {
                 return
             }
             contactView.dataSourceItem = source
-            addressView.dataSourceItem = source.address
             companyView.dataSourceItem = source.company
             if let location = source.address?.location {
                 addressView.mapView.centerToLocation(location)

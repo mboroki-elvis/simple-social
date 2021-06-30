@@ -64,8 +64,19 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
-    func updateSearchResults(for _: UISearchController) {
-        applySnapshot()
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text ?? ""
+        if searchText.isEmpty {
+            fetchedResultsController = DataPosts.getController()
+        } else {
+            fetchedResultsController = DataPosts.search(term: searchText)
+        }
+        fetchedResultsController?.delegate = self
+        do {
+            try fetchedResultsController?.performFetch()
+        } catch {
+            Logger.shared.log(error)
+        }
     }
 
     private func setupDataController() {

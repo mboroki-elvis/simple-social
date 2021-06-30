@@ -43,7 +43,6 @@ class DetailsController: UITableViewController {
                 return cell
             case let .three(comment):
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as? CommentCell
-                debugPrint(comment)
                 cell?.dataSourceItem = comment
                 return cell
             }
