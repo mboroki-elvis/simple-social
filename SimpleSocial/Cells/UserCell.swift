@@ -5,8 +5,8 @@
 //  Created by Elvis Mwenda on 30/06/2021.
 //
 
-import UIKit
 import MapKit
+import UIKit
 
 enum UserAction: Int {
     case name = 0, email, phone, website
@@ -17,40 +17,7 @@ protocol UserActionDelegate: AnyObject {
 }
 
 class UserCell: UITableViewCell {
-    var dataSourceItem: DataUsers? {
-        didSet {
-            guard let source = dataSourceItem else {
-                return
-            }
-            contactView.dataSourceItem = source
-            companyView.dataSourceItem = source.company
-            if let location = source.address?.location {
-                addressView.mapView.centerToLocation(location)
-                let annotation = MKPointAnnotation()
-                annotation.title = source.address?.city
-                annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-                addressView.mapView.addAnnotation(annotation)
-            }
-        }
-    }
-
-    let contactView: DetailsView = {
-        let view = DetailsView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    let addressView: AddressDetailsView = {
-        let view = AddressDetailsView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    let companyView: CompanyDetailsView = {
-        let view = CompanyDetailsView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    // MARK: Lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -81,5 +48,42 @@ class UserCell: UITableViewCell {
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Internal
+
+    let contactView: DetailsView = {
+        let view = DetailsView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    let addressView: AddressDetailsView = {
+        let view = AddressDetailsView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    let companyView: CompanyDetailsView = {
+        let view = CompanyDetailsView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    var dataSourceItem: DataUsers? {
+        didSet {
+            guard let source = dataSourceItem else {
+                return
+            }
+            contactView.dataSourceItem = source
+            companyView.dataSourceItem = source.company
+            if let location = source.address?.location {
+                addressView.mapView.centerToLocation(location)
+                let annotation = MKPointAnnotation()
+                annotation.title = source.address?.city
+                annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                addressView.mapView.addAnnotation(annotation)
+            }
+        }
     }
 }

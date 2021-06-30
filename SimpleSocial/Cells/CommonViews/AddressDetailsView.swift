@@ -10,20 +10,7 @@ import MapKit
 import UIKit
 
 class AddressDetailsView: UIView {
-    lazy var mapView: MKMapView = {
-        let map = MKMapView()
-        map.showsCompass = true
-        map.showsScale = true
-        map.showsUserLocation = true
-        map.mapType = .standard
-        map.isZoomEnabled = true
-        map.isScrollEnabled = true
-        map.showsCompass = true
-        map.showsScale = true
-        map.showsUserLocation = true
-        map.translatesAutoresizingMaskIntoConstraints = false
-        return map
-    }()
+    // MARK: Lifecycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,4 +27,21 @@ class AddressDetailsView: UIView {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: Internal
+
+    lazy var mapView: MKMapView = {
+        let map = MKMapView()
+        map.showsCompass = true
+        map.showsScale = true
+        map.showsUserLocation = true
+        map.mapType = .standard
+        map.isZoomEnabled = true
+        map.isScrollEnabled = true
+        map.showsCompass = true
+        map.showsScale = true
+        map.showsUserLocation = true
+        map.translatesAutoresizingMaskIntoConstraints = false
+        return map
+    }()
 }

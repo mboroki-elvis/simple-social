@@ -10,22 +10,15 @@ import Foundation
 import UIKit
 
 class HomeController: UITableViewController, UISearchResultsUpdating {
+    // MARK: Internal
+
     enum Section {
         case main
     }
 
-    private lazy var dataSource: DataSource = {
-        DataSource(tableView: tableView, cellProvider: { [weak self] _, indexPath, _ -> UITableViewCell? in
-            guard let self = self else { return nil }
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
-            cell?.dataSourceItem = self.fetchedResultsController?.object(at: indexPath)
-            return cell
-        })
-    }()
-
     typealias DataSource = UITableViewDiffableDataSource<Section, NSManagedObjectID>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, NSManagedObjectID>
-    private var fetchedResultsController: NSFetchedResultsController<DataPosts>?
+
     lazy var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
         controller.searchResultsUpdater = self
@@ -78,6 +71,19 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
             Logger.shared.log(error)
         }
     }
+
+    // MARK: Private
+
+    private lazy var dataSource: DataSource = {
+        DataSource(tableView: tableView, cellProvider: { [weak self] _, indexPath, _ -> UITableViewCell? in
+            guard let self = self else { return nil }
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
+            cell?.dataSourceItem = self.fetchedResultsController?.object(at: indexPath)
+            return cell
+        })
+    }()
+
+    private var fetchedResultsController: NSFetchedResultsController<DataPosts>?
 
     private func setupDataController() {
         fetchedResultsController = DataPosts.getController()

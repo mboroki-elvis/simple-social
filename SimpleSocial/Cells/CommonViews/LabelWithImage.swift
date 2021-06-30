@@ -8,6 +8,20 @@
 import UIKit
 
 class LabelWithImage: UIView {
+    // MARK: Lifecycle
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Internal
+
     let selectImage: RoundImage = {
         let image = RoundImage()
         image.contentMode = .scaleAspectFit
@@ -24,6 +38,8 @@ class LabelWithImage: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+
+    // MARK: Private
 
     private func setupViews() {
         backgroundColor = StyleHelper.backgroundColor
@@ -54,15 +70,5 @@ class LabelWithImage: UIView {
             titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -Constants.doublePadding)
         ]
         NSLayoutConstraint.activate(contraints)
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-
-    @available(*, unavailable)
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

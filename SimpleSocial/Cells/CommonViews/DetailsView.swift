@@ -8,52 +8,7 @@
 import UIKit
 
 class DetailsView: UIView {
-    weak var delegate: UserActionDelegate?
-    var dataSourceItem: DataUsers? {
-        didSet {
-            guard let source = dataSourceItem else { return }
-            nameButton.titleLabel.text = source.name
-            emailButton.titleLabel.text = source.email
-            phoneButton.titleLabel.text = source.phone
-            websiteButton.titleLabel.text = source.website
-        }
-    }
-
-    lazy var nameButton: LabelWithImage = {
-        let button = LabelWithImage()
-        button.tag = UserAction.name.rawValue
-        button.selectImage.image = #imageLiteral(resourceName: "icon-name").withRenderingMode(.alwaysTemplate)
-        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
-    lazy var emailButton: LabelWithImage = {
-        let button = LabelWithImage()
-        button.tag = UserAction.email.rawValue
-        button.selectImage.image = #imageLiteral(resourceName: "icon-email").withRenderingMode(.alwaysTemplate)
-        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
-    lazy var phoneButton: LabelWithImage = {
-        let button = LabelWithImage()
-        button.tag = UserAction.phone.rawValue
-        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
-        button.selectImage.image = #imageLiteral(resourceName: "icon-phone").withRenderingMode(.alwaysTemplate)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
-    lazy var websiteButton: LabelWithImage = {
-        let button = LabelWithImage()
-        button.tag = UserAction.website.rawValue
-        button.selectImage.image = #imageLiteral(resourceName: "icon-website").withRenderingMode(.alwaysTemplate)
-        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    // MARK: Lifecycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -93,6 +48,57 @@ class DetailsView: UIView {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: Internal
+
+    weak var delegate: UserActionDelegate?
+    lazy var nameButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.name.rawValue
+        button.selectImage.image = #imageLiteral(resourceName: "icon-name").withRenderingMode(.alwaysTemplate)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    lazy var emailButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.email.rawValue
+        button.selectImage.image = #imageLiteral(resourceName: "icon-email").withRenderingMode(.alwaysTemplate)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    lazy var phoneButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.phone.rawValue
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
+        button.selectImage.image = #imageLiteral(resourceName: "icon-phone").withRenderingMode(.alwaysTemplate)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    lazy var websiteButton: LabelWithImage = {
+        let button = LabelWithImage()
+        button.tag = UserAction.website.rawValue
+        button.selectImage.image = #imageLiteral(resourceName: "icon-website").withRenderingMode(.alwaysTemplate)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(doAction)))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    var dataSourceItem: DataUsers? {
+        didSet {
+            guard let source = dataSourceItem else { return }
+            nameButton.titleLabel.text = source.name
+            emailButton.titleLabel.text = source.email
+            phoneButton.titleLabel.text = source.phone
+            websiteButton.titleLabel.text = source.website
+        }
+    }
+
+    // MARK: Private
 
     @objc private func doAction(sender: UITapGestureRecognizer) {
         guard let view = sender.view, let action = UserAction(rawValue: view.tag) else {

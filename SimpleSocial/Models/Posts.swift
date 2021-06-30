@@ -10,20 +10,20 @@ import Foundation
 // MARK: - Post
 
 struct Post: Codable, Hashable {
-    let userID, id: Int64
-    let title, body: String
-
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
         case id, title, body
     }
 
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
+    let userID, id: Int64
+    let title, body: String
 
     static func == (lhs: Post, rhs: Post) -> Bool {
         return lhs.id == rhs.id && lhs.title == rhs.title && lhs.body == rhs.body
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 

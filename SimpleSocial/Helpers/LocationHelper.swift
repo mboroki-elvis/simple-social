@@ -9,11 +9,33 @@ import CoreLocation
 import Foundation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
-    private var manager = CLLocationManager()
-    static var shared = LocationManager()
+    // MARK: Lifecycle
+
     override init() {
         super.init()
     }
+
+    // MARK: Internal
+
+    static var shared = LocationManager()
+
+    func setupManager() {
+        // Locations get
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.startUpdatingLocation()
+        checkPermission()
+    }
+
+    func locationManager(_: CLLocationManager, didChangeAuthorization _: CLAuthorizationStatus) {}
+
+    func locationManager(_: CLLocationManager, didUpdateLocations _: [CLLocation]) {}
+
+    func locationManager(_: CLLocationManager, didFailWithError _: Error) {}
+
+    // MARK: Private
+
+    private var manager = CLLocationManager()
 
     private func checkPermission() {
         if CLLocationManager.locationServicesEnabled() {
@@ -44,18 +66,4 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             }
         }
     }
-
-    func setupManager() {
-        // Locations get
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.startUpdatingLocation()
-        checkPermission()
-    }
-
-    func locationManager(_: CLLocationManager, didChangeAuthorization _: CLAuthorizationStatus) {}
-
-    func locationManager(_: CLLocationManager, didUpdateLocations _: [CLLocation]) {}
-
-    func locationManager(_: CLLocationManager, didFailWithError _: Error) {}
 }

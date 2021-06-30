@@ -13,6 +13,7 @@ import Foundation
 public class DataPosts: NSManagedObject, CoreDataDelegate {
     typealias Item = Post
     typealias DataType = DataPosts
+
     static func saveData(items: [Post]) {
         let moc = CoreDataStack.shared.persistentContainer.viewContext
         for item in items {

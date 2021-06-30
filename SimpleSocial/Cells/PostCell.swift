@@ -8,6 +8,26 @@
 import UIKit
 
 class PostCell: UITableViewCell {
+    // MARK: Lifecycle
+
+    override init(style _: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
+        textLabel?.numberOfLines = .zero
+        textLabel?.textColor = StyleHelper.itemTintColor
+        textLabel?.font = UIFont.font(weight: .bold, ofSize: 18)
+        detailTextLabel?.numberOfLines = .zero
+        detailTextLabel?.textColor = .gray
+        detailTextLabel?.font = UIFont.font(weight: .regular, ofSize: 14)
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Internal
+
     var dataSourceItem: DataPosts? {
         didSet {
             guard let source = dataSourceItem else {
@@ -16,21 +36,5 @@ class PostCell: UITableViewCell {
             textLabel?.text = source.title
             detailTextLabel?.text = source.body
         }
-    }
-
-    override init(style _: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
-        textLabel?.numberOfLines = .zero
-        textLabel?.textColor = StyleHelper.itemTintColor
-        textLabel?.font = StyleHelper.defaultBoldFont
-        detailTextLabel?.numberOfLines = .zero
-        detailTextLabel?.textColor = .gray
-        detailTextLabel?.font = StyleHelper.defaultFont
-    }
-
-    @available(*, unavailable)
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
