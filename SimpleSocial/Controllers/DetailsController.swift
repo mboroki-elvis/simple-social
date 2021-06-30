@@ -184,7 +184,7 @@ extension DetailsController: UserActionDelegate {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         case .website:
-            if let website = user.website, let url = URL(string: website) {
+            if let website = user.website, let url = URL(string: "https://\(website)") {
                 UIApplication.shared.open(url)
             }
         }
