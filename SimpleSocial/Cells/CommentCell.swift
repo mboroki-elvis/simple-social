@@ -35,7 +35,7 @@ class CommentCell: UITableViewCell {
             }
             if let userName = source.email?.components(separatedBy: "@").first {
                 let attributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBlue, NSAttributedString.Key.font: UIFont.font(weight: .bold, ofSize: 18)]
-                let att = NSMutableAttributedString(string: "@\(userName) says ", attributes: attributes)
+                let att = NSMutableAttributedString(string: "@\(userName) \n", attributes: attributes)
                 let titleAtt = [NSAttributedString.Key.foregroundColor: StyleHelper.itemTintColor, NSAttributedString.Key.font: StyleHelper.defaultBoldFont]
                 let title = NSAttributedString(string: source.name ?? "", attributes: titleAtt)
                 att.append(title)

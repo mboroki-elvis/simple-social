@@ -187,10 +187,10 @@ extension DetailsController: UserActionDelegate {
         switch action {
         case .name:
             if let name = user.name {
-                let activityViewController = UIActivityViewController(activityItems: ["@\(name)"], applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = view
-                activityViewController.excludedActivityTypes = []
-                present(activityViewController, animated: true, completion: nil)
+                let controller = UIActivityViewController(activityItems: ["@\(name)"], applicationActivities: nil)
+                controller.popoverPresentationController?.sourceView = view
+                controller.excludedActivityTypes = []
+                present(controller, animated: true, completion: nil)
             }
         case .email:
             if let email = user.email, let url = URL(string: "mailto://\(email)"), UIApplication.shared.canOpenURL(url) {

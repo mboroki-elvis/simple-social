@@ -37,6 +37,7 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
         setupDataController()
         setupData()
         definesPresentationContext = true
+        tableView.accessibilityIdentifier = "HomeScreen"
         navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .never
@@ -79,6 +80,7 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
             guard let self = self else { return nil }
             let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
             cell?.dataSourceItem = self.fetchedResultsController?.object(at: indexPath)
+            cell?.accessibilityIdentifier = "HomeScreen_\(indexPath.row)"
             return cell
         })
     }()
@@ -111,10 +113,8 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
     }
 
     private func setupData() {
-        if let controller = fetchedResultsController {
-            if controller.fetchedObjects?.count == .zero {
-                getData()
-            }
+        if let controller = fetchedResultsController, controller.fetchedObjects?.count == .zero {
+            getData()
         }
     }
 }

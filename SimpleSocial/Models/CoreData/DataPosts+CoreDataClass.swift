@@ -27,6 +27,17 @@ public class DataPosts: NSManagedObject, CoreDataDelegate {
     }
 
     static func getData() -> [DataPosts] {
+        let moc = CoreDataStack.shared.persistentContainer.viewContext
+        let entityDescription = NSEntityDescription.entity(forEntityName: "DataPosts", in: moc)
+        let request: NSFetchRequest<DataPosts> = DataPosts.fetchRequest()
+        request.entity = entityDescription
+        let systemTimeSort = NSSortDescriptor(key: "id", ascending: true)
+        request.sortDescriptors = [systemTimeSort]
+        do {
+            return try moc.fetch(request)
+        } catch {
+            Logger.shared.log(error)
+        }
         return []
     }
 
