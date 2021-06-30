@@ -27,6 +27,8 @@
 		EE1E25F7268B27CF00E652ED /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F6268B27CF00E652ED /* DetailsController.swift */; };
 		EE1E25F9268B28CD00E652ED /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F8268B28CD00E652ED /* Networking.swift */; };
 		EE1E25FC268B2CF800E652ED /* ApiGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25FB268B2CF800E652ED /* ApiGroup.swift */; };
+		EE4448D3268C267000385C04 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4448D2268C267000385C04 /* LocationHelper.swift */; };
+		EE4448D5268C2ADF00385C04 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4448D4268C2ADF00385C04 /* MapKit.framework */; };
 		EE493603268BF1690061A258 /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE493602268BF1690061A258 /* HeaderLabel.swift */; };
 		EE493606268BF3140061A258 /* AddressDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE493605268BF3140061A258 /* AddressDetailsView.swift */; };
 		EE493608268BF3380061A258 /* CompanyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE493607268BF3380061A258 /* CompanyDetailsView.swift */; };
@@ -100,6 +102,8 @@
 		EE1E25F6268B27CF00E652ED /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		EE1E25F8268B28CD00E652ED /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		EE1E25FB268B2CF800E652ED /* ApiGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGroup.swift; sourceTree = "<group>"; };
+		EE4448D2268C267000385C04 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		EE4448D4268C2ADF00385C04 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EE493602268BF1690061A258 /* HeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
 		EE493605268BF3140061A258 /* AddressDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetailsView.swift; sourceTree = "<group>"; };
 		EE493607268BF3380061A258 /* CompanyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsView.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEEB8C6A268B31AB007A4E26 /* Alamofire in Frameworks */,
+				EE4448D5268C2ADF00385C04 /* MapKit.framework in Frameworks */,
 				B5962C8AFDBD83F1E887AF27 /* Pods_SimpleSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +159,7 @@
 		44AFD93752D7FA5A7D6C7F85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE4448D4268C2ADF00385C04 /* MapKit.framework */,
 				7245C79AD9EF4C243A89B31A /* Pods_SimpleSocial.framework */,
 				3622F16F51AD41B691084FA8 /* Pods_SimpleSocial_SimpleSocialUITests.framework */,
 				1C5B5B2E655A4BA444036354 /* Pods_SimpleSocialTests.framework */,
@@ -266,6 +272,7 @@
 			children = (
 				EE62339B268B77D900B5662F /* Networking */,
 				EEEB8C6B268B32B8007A4E26 /* Constants.swift */,
+				EE4448D2268C267000385C04 /* LocationHelper.swift */,
 				EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */,
 			);
 			path = Helpers;
@@ -581,6 +588,7 @@
 				EE1E25F9268B28CD00E652ED /* Networking.swift in Sources */,
 				EE6233AF268B787900B5662F /* DataAddress+CoreDataClass.swift in Sources */,
 				EE49360A268BF3D00061A258 /* DetailsView.swift in Sources */,
+				EE4448D3268C267000385C04 /* LocationHelper.swift in Sources */,
 				EE1E25F4268B275800E652ED /* Comments.swift in Sources */,
 				EE1E25F7268B27CF00E652ED /* DetailsController.swift in Sources */,
 				EE6233A8268B787900B5662F /* DataPosts+CoreDataProperties.swift in Sources */,

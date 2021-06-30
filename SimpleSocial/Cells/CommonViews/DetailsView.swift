@@ -66,7 +66,7 @@ class DetailsView: UIView {
         addSubview(websiteButton)
         let constraints = [
             nameButton.topAnchor.constraint(equalTo: topAnchor),
-            nameButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            nameButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultPadding),
             nameButton.widthAnchor.constraint(equalTo: emailButton.widthAnchor),
             nameButton.trailingAnchor.constraint(equalTo: emailButton.leadingAnchor),
             nameButton.bottomAnchor.constraint(equalTo: phoneButton.topAnchor, constant: -Constants.defaultPadding),
@@ -74,11 +74,11 @@ class DetailsView: UIView {
             emailButton.topAnchor.constraint(equalTo: nameButton.topAnchor),
             emailButton.widthAnchor.constraint(equalTo: nameButton.widthAnchor),
             emailButton.leadingAnchor.constraint(equalTo: nameButton.trailingAnchor),
-            emailButton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            emailButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.defaultPadding),
             emailButton.bottomAnchor.constraint(equalTo: nameButton.bottomAnchor),
 
             phoneButton.topAnchor.constraint(equalTo: nameButton.bottomAnchor, constant: Constants.defaultPadding),
-            phoneButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            phoneButton.leadingAnchor.constraint(equalTo: nameButton.leadingAnchor),
             phoneButton.widthAnchor.constraint(equalTo: websiteButton.widthAnchor),
             phoneButton.trailingAnchor.constraint(equalTo: websiteButton.leadingAnchor),
             phoneButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.defaultPadding),
@@ -86,7 +86,7 @@ class DetailsView: UIView {
             websiteButton.topAnchor.constraint(equalTo: phoneButton.topAnchor),
             websiteButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
             websiteButton.leadingAnchor.constraint(equalTo: phoneButton.trailingAnchor),
-            websiteButton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            websiteButton.trailingAnchor.constraint(equalTo: emailButton.trailingAnchor),
             websiteButton.bottomAnchor.constraint(equalTo: phoneButton.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constraints)

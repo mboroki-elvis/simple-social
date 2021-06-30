@@ -34,16 +34,19 @@ class DetailsController: UITableViewController {
             debugPrint("item: \(item)")
             switch item {
             case let .one(post):
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier,
+                                                              for: indexPath) as? PostCell
                 cell?.dataSourceItem = post
                 return cell
             case let .two(user):
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.identifier, for: indexPath) as? UserCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.identifier,
+                                                              for: indexPath) as? UserCell
                 cell?.dataSourceItem = user
                 cell?.addressView.mapView.delegate = self
                 return cell
             case let .three(comments):
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as? CommentCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier,
+                                                              for: indexPath) as? CommentCell
                 cell?.dataSourceItem = comments[indexPath.item]
                 return cell
             }
@@ -83,7 +86,7 @@ class DetailsController: UITableViewController {
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
-    fileprivate func updateUser() {
+    private func updateUser() {
         if let user = user {
             var snapshot = dataSource.snapshot()
             snapshot.appendItems([Wrapper.two(user)], toSection: .user)
@@ -114,7 +117,7 @@ class DetailsController: UITableViewController {
     }
 
     private func getComments(item: DataPosts) {
-        if let comments = item.comments?.allObjects as? [DataComments] {
+        if let comments = item.comments?.allObjects as? [DataComments], !comments.isEmpty {
             var snapshot = dataSource.snapshot()
             snapshot.appendItems([Wrapper.three(comments)], toSection: .comments)
             dataSource.apply(snapshot, animatingDifferences: true, completion: nil)

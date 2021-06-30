@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>For Complete app performance</string>
+	<key>NSLocationUsageDescription</key>
+	<string>For Complete app performance</string>
+	<key>NSLocationDefaultAccuracyReduced</key>
+	<string>For Complete app performance</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>For Complete app performance</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>For Complete app performance</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ProximaNovaBold.otf</string>

@@ -37,6 +37,7 @@ class AddressDetailsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(mapView)
+        mapView.center = center
         mapView.showsUserLocation = true
         mapView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         mapView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
