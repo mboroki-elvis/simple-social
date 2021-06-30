@@ -29,7 +29,7 @@ class CoreDataStack: NSObject {
                 #if DEBUG
                     fatalError("Unresolved error \(error), \(error.userInfo)")
                 #else
-                    Logger.shared.log(e: error) // we should log this to sentry, crashlytics or something
+                    Logger.shared.log(error) // we should log this to sentry, crashlytics or something
                 #endif
             }
         })
@@ -48,7 +48,7 @@ class CoreDataStack: NSObject {
                 #if DEBUG
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 #else
-                    Logger.shared.log(e: error) // we should log this to sentry, crashlytics or something
+                    Logger.shared.log(error) // we should log this to sentry, crashlytics or something
                 #endif
             }
         }
