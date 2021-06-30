@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 enum UserAction: Int {
     case name = 0, email, phone, website
@@ -26,6 +27,10 @@ class UserCell: UITableViewCell {
             companyView.dataSourceItem = source.company
             if let location = source.address?.location {
                 addressView.mapView.centerToLocation(location)
+                let annotation = MKPointAnnotation()
+                annotation.title = source.address?.city
+                annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                addressView.mapView.addAnnotation(annotation)
             }
         }
     }
@@ -55,7 +60,7 @@ class UserCell: UITableViewCell {
         contentView.addSubview(addressView)
         contentView.addSubview(companyView)
         let contraints = [
-            contactView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            contactView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.defaultPadding),
             contactView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             contactView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             contactView.bottomAnchor.constraint(equalTo: addressView.topAnchor, constant: -Constants.defaultPadding),

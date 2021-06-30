@@ -13,7 +13,6 @@ class PostCell: UITableViewCell {
             guard let source = dataSourceItem else {
                 return
             }
-            debugPrint(source.title)
             textLabel?.text = source.title
             detailTextLabel?.text = source.body
         }

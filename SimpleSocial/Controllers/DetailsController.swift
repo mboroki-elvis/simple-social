@@ -20,7 +20,7 @@ class DetailsController: UITableViewController {
     enum Wrapper: Hashable {
         case one(DataPosts)
         case two(DataUsers)
-        case three([DataComments])
+        case three(DataComments)
     }
 
     private var post: DataPosts?
@@ -29,9 +29,7 @@ class DetailsController: UITableViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Wrapper>
     private lazy var dataSource: DataSource = {
         DataSource(tableView: tableView, cellProvider: { [weak self] _, indexPath, item -> UITableViewCell? in
-            debugPrint("item: \(item)")
             guard let self = self else { return nil }
-            debugPrint("item: \(item)")
             switch item {
             case let .one(post):
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as? PostCell
@@ -43,9 +41,10 @@ class DetailsController: UITableViewController {
                 cell?.contactView.delegate = self
                 cell?.addressView.mapView.delegate = self
                 return cell
-            case let .three(comments):
+            case let .three(comment):
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as? CommentCell
-                cell?.dataSourceItem = comments[indexPath.item]
+                debugPrint(comment)
+                cell?.dataSourceItem = comment
                 return cell
             }
         })
@@ -78,8 +77,10 @@ class DetailsController: UITableViewController {
         snapshot.appendSections([.description])
         snapshot.appendSections([.user])
         snapshot.appendSections([.comments])
-        snapshot.appendItems([Wrapper.one(post!)], toSection: .description)
-        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+        if let post = post {
+            snapshot.appendItems([Wrapper.one(post)], toSection: .description)
+            dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+        }
     }
 
     private func updateUser() {
@@ -104,7 +105,7 @@ class DetailsController: UITableViewController {
                         Logger.shared.log(error)
                     }
                 } else if let error = error {
-                    print(error)
+                    Logger.shared.log(error)
                 }
             }
         } else {
@@ -115,8 +116,10 @@ class DetailsController: UITableViewController {
     private func getComments(item: DataPosts) {
         if let comments = item.comments?.allObjects as? [DataComments], !comments.isEmpty {
             var snapshot = dataSource.snapshot()
-            snapshot.appendItems([Wrapper.three(comments)], toSection: .comments)
-            dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+            comments.forEach { comment in
+                snapshot.appendItems([Wrapper.three(comment)], toSection: .comments)
+                self.dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+            }
         } else {
             getData(item)
         }
@@ -128,11 +131,18 @@ class DetailsController: UITableViewController {
                 do {
                     let comments = try JSONDecoder().decode(Comments.self, from: data)
                     DataComments.saveData(items: comments)
+                    if let dataComments = DataComments.getComments(postId: item.id) {
+                        var snapshot = self.dataSource.snapshot()
+                        dataComments.forEach { comment in
+                            snapshot.appendItems([Wrapper.three(comment)], toSection: .comments)
+                            self.dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+                        }
+                    }
                 } catch {
                     Logger.shared.log(error)
                 }
             } else if let error = error {
-                print(error)
+                Logger.shared.log(error)
             }
         }
     }
@@ -190,4 +200,16 @@ extension DetailsController: UserActionDelegate {
         }
     }
 }
-extension DetailsController: MKMapViewDelegate, CLLocationManagerDelegate {}
+extension DetailsController: MKMapViewDelegate, CLLocationManagerDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseId = "annotation"
+        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+        if anView == nil {
+            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            anView?.canShowCallout = true
+        } else {
+            anView?.annotation = annotation
+        }
+        return anView
+    }
+}
