@@ -1,0 +1,868 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		08B6F18F9C9E096A44780F188B19DB12 /* Pods-SimpleSocialTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7374D62B61F6DB4B372B1BD950FCF /* Pods-SimpleSocialTests-dummy.m */; };
+		21795EC8221516F7DC63129180B358F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2C694E6EB18B3E508F0163E571A99DF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3969E1F890B8D8834E8BDED50D24FA65 /* Pods-SimpleSocial-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 218D2E326E8356A2E72FF45B91127E80 /* Pods-SimpleSocial-dummy.m */; };
+		7800D4FEF700ABE41A35A25E2872F435 /* Pods-SimpleSocialTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3383D2A711A9DC0942AE67BAB53ECF60 /* Pods-SimpleSocialTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82971CF61240800F6A5148247582C8BD /* Pods-SimpleSocial-SimpleSocialUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA98DE8388328EED18C04212588AEFD8 /* Pods-SimpleSocial-SimpleSocialUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5452FC1872BE74C1C8B462EDF2F1816 /* Pods-SimpleSocial-SimpleSocialUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B362797CFE536C0F1545BC1D022539F0 /* Pods-SimpleSocial-SimpleSocialUITests-dummy.m */; };
+		F6C8F5452EDD075D95B01F823098F7CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FE50DFC5347C70B99A252687325D7C96 /* Pods-SimpleSocial-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CCFBC6E57522B20CB27BAB9AC69E313 /* Pods-SimpleSocial-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5132AA4377A9A1E2E1895D6F5B7556E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1978A2AA154647BC52908E2843A45F35;
+			remoteInfo = "Pods-SimpleSocial";
+		};
+		6169F6E633C8A9D9B7FCB0A1835036C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		661C3BFED78AEDF63F137A8052E9D339 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06D7374D62B61F6DB4B372B1BD950FCF /* Pods-SimpleSocialTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleSocialTests-dummy.m"; sourceTree = "<group>"; };
+		0F40ED3455CB8C98C0793BC1D0050D1B /* Pods_SimpleSocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11535414A74AE2333BB19C1BFF9941E3 /* Pods-SimpleSocial-SimpleSocialUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleSocial-SimpleSocialUITests-Info.plist"; sourceTree = "<group>"; };
+		160CE9C9947EA73AABBD4C094271BA82 /* Pods-SimpleSocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleSocialTests.release.xcconfig"; sourceTree = "<group>"; };
+		18BE706AC16AD98A51FF08D7B7FD3CD0 /* Pods-SimpleSocial-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleSocial-Info.plist"; sourceTree = "<group>"; };
+		20CE7D48518C212DF76648E1FCDE2DB5 /* Pods-SimpleSocial-SimpleSocialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleSocial-SimpleSocialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		218D2E326E8356A2E72FF45B91127E80 /* Pods-SimpleSocial-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleSocial-dummy.m"; sourceTree = "<group>"; };
+		3383D2A711A9DC0942AE67BAB53ECF60 /* Pods-SimpleSocialTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleSocialTests-umbrella.h"; sourceTree = "<group>"; };
+		39DEBB5BAF006B8FFA302FB182378D4D /* Pods_SimpleSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CCFBC6E57522B20CB27BAB9AC69E313 /* Pods-SimpleSocial-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleSocial-umbrella.h"; sourceTree = "<group>"; };
+		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		663A1384A489ED735F77EA4305B67EC3 /* Pods-SimpleSocial-SimpleSocialUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleSocial-SimpleSocialUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6B63FA82702FA31BD61559A48480E82F /* Pods-SimpleSocialTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleSocialTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		740E34F321FC09D1B79EBF27AC2D0F16 /* Pods-SimpleSocial-SimpleSocialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleSocial-SimpleSocialUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		8297EEE53BF4EBD20FDA2A78049A56A4 /* Pods-SimpleSocial-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleSocial-acknowledgements.plist"; sourceTree = "<group>"; };
+		8750D54582FAD0399AA1CAA10F878557 /* Pods_SimpleSocial_SimpleSocialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSocial_SimpleSocialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABB7389B0CCC77A047C18F471BB6C44 /* Pods-SimpleSocialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleSocialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B38033DC719546CD3FB59D632B3D11F /* Pods-SimpleSocialTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleSocialTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		92C6CA72609EF4922F700823F4A7E2FB /* Pods-SimpleSocial-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleSocial-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93F88F921B7CF4735AE99F4721F2905B /* Pods-SimpleSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleSocial.debug.xcconfig"; sourceTree = "<group>"; };
+		9A3247051508B40E59B55A1441D991F8 /* Pods-SimpleSocial-SimpleSocialUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleSocial-SimpleSocialUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4F5E455FA93D293F1A23AED75639235 /* Pods-SimpleSocialTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleSocialTests.modulemap"; sourceTree = "<group>"; };
+		B362797CFE536C0F1545BC1D022539F0 /* Pods-SimpleSocial-SimpleSocialUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleSocial-SimpleSocialUITests-dummy.m"; sourceTree = "<group>"; };
+		D36AE46224A74D3CC060B5EE9ACFFE9D /* Pods-SimpleSocialTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleSocialTests-Info.plist"; sourceTree = "<group>"; };
+		DC468E3163A37452477ECAD65A57068D /* Pods-SimpleSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleSocial.release.xcconfig"; sourceTree = "<group>"; };
+		E5D5AB3A3F6176322C51F4465DAB22C4 /* Pods-SimpleSocial-SimpleSocialUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleSocial-SimpleSocialUITests.modulemap"; sourceTree = "<group>"; };
+		EA98DE8388328EED18C04212588AEFD8 /* Pods-SimpleSocial-SimpleSocialUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleSocial-SimpleSocialUITests-umbrella.h"; sourceTree = "<group>"; };
+		F0441514578AE77B9DE1485D2C557818 /* Pods-SimpleSocial.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleSocial.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		633D78350E7A54D37784A65DE3D327A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C8F5452EDD075D95B01F823098F7CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF38A03FE8685A914B07A1A26E3453A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C694E6EB18B3E508F0163E571A99DF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA64AFAF53EE6262B90518DCBD0EBE07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21795EC8221516F7DC63129180B358F3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EAD0C0816A457DEF7C432D5592D9153 /* Pods-SimpleSocial-SimpleSocialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D5AB3A3F6176322C51F4465DAB22C4 /* Pods-SimpleSocial-SimpleSocialUITests.modulemap */,
+				663A1384A489ED735F77EA4305B67EC3 /* Pods-SimpleSocial-SimpleSocialUITests-acknowledgements.markdown */,
+				9A3247051508B40E59B55A1441D991F8 /* Pods-SimpleSocial-SimpleSocialUITests-acknowledgements.plist */,
+				B362797CFE536C0F1545BC1D022539F0 /* Pods-SimpleSocial-SimpleSocialUITests-dummy.m */,
+				11535414A74AE2333BB19C1BFF9941E3 /* Pods-SimpleSocial-SimpleSocialUITests-Info.plist */,
+				EA98DE8388328EED18C04212588AEFD8 /* Pods-SimpleSocial-SimpleSocialUITests-umbrella.h */,
+				20CE7D48518C212DF76648E1FCDE2DB5 /* Pods-SimpleSocial-SimpleSocialUITests.debug.xcconfig */,
+				740E34F321FC09D1B79EBF27AC2D0F16 /* Pods-SimpleSocial-SimpleSocialUITests.release.xcconfig */,
+			);
+			name = "Pods-SimpleSocial-SimpleSocialUITests";
+			path = "Target Support Files/Pods-SimpleSocial-SimpleSocialUITests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6AC6763AD406D81140691408941EDB5D /* Pods-SimpleSocialTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5E455FA93D293F1A23AED75639235 /* Pods-SimpleSocialTests.modulemap */,
+				8B38033DC719546CD3FB59D632B3D11F /* Pods-SimpleSocialTests-acknowledgements.markdown */,
+				6B63FA82702FA31BD61559A48480E82F /* Pods-SimpleSocialTests-acknowledgements.plist */,
+				06D7374D62B61F6DB4B372B1BD950FCF /* Pods-SimpleSocialTests-dummy.m */,
+				D36AE46224A74D3CC060B5EE9ACFFE9D /* Pods-SimpleSocialTests-Info.plist */,
+				3383D2A711A9DC0942AE67BAB53ECF60 /* Pods-SimpleSocialTests-umbrella.h */,
+				8ABB7389B0CCC77A047C18F471BB6C44 /* Pods-SimpleSocialTests.debug.xcconfig */,
+				160CE9C9947EA73AABBD4C094271BA82 /* Pods-SimpleSocialTests.release.xcconfig */,
+			);
+			name = "Pods-SimpleSocialTests";
+			path = "Target Support Files/Pods-SimpleSocialTests";
+			sourceTree = "<group>";
+		};
+		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
+				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		80CBBE9BC289CEC891E912022322F338 /* Pods-SimpleSocial */ = {
+			isa = PBXGroup;
+			children = (
+				F0441514578AE77B9DE1485D2C557818 /* Pods-SimpleSocial.modulemap */,
+				92C6CA72609EF4922F700823F4A7E2FB /* Pods-SimpleSocial-acknowledgements.markdown */,
+				8297EEE53BF4EBD20FDA2A78049A56A4 /* Pods-SimpleSocial-acknowledgements.plist */,
+				218D2E326E8356A2E72FF45B91127E80 /* Pods-SimpleSocial-dummy.m */,
+				18BE706AC16AD98A51FF08D7B7FD3CD0 /* Pods-SimpleSocial-Info.plist */,
+				3CCFBC6E57522B20CB27BAB9AC69E313 /* Pods-SimpleSocial-umbrella.h */,
+				93F88F921B7CF4735AE99F4721F2905B /* Pods-SimpleSocial.debug.xcconfig */,
+				DC468E3163A37452477ECAD65A57068D /* Pods-SimpleSocial.release.xcconfig */,
+			);
+			name = "Pods-SimpleSocial";
+			path = "Target Support Files/Pods-SimpleSocial";
+			sourceTree = "<group>";
+		};
+		8EB3E88884EA20B3C25CDFC5C74D2AB4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80CBBE9BC289CEC891E912022322F338 /* Pods-SimpleSocial */,
+				1EAD0C0816A457DEF7C432D5592D9153 /* Pods-SimpleSocial-SimpleSocialUITests */,
+				6AC6763AD406D81140691408941EDB5D /* Pods-SimpleSocialTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6D038A762BD0060147923B44D1E81B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39DEBB5BAF006B8FFA302FB182378D4D /* Pods_SimpleSocial.framework */,
+				8750D54582FAD0399AA1CAA10F878557 /* Pods_SimpleSocial_SimpleSocialUITests.framework */,
+				0F40ED3455CB8C98C0793BC1D0050D1B /* Pods_SimpleSocialTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				965877409E01FB3D85D85E90E6B30185 /* Pods */,
+				A6D038A762BD0060147923B44D1E81B2 /* Products */,
+				8EB3E88884EA20B3C25CDFC5C74D2AB4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
+			);
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8AC02BEFD238D2DBE0BAF85E625E2F70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE50DFC5347C70B99A252687325D7C96 /* Pods-SimpleSocial-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C450593D5B92288608247AD989416485 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82971CF61240800F6A5148247582C8BD /* Pods-SimpleSocial-SimpleSocialUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE8EC9B4F694349ADB7F321A731E7B74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7800D4FEF700ABE41A35A25E2872F435 /* Pods-SimpleSocialTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1978A2AA154647BC52908E2843A45F35 /* Pods-SimpleSocial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D158820C37A3433F16F1DD2B1F67F2F0 /* Build configuration list for PBXNativeTarget "Pods-SimpleSocial" */;
+			buildPhases = (
+				8AC02BEFD238D2DBE0BAF85E625E2F70 /* Headers */,
+				CDC230A9161B668BE886AF3DB73FF2BE /* Sources */,
+				633D78350E7A54D37784A65DE3D327A6 /* Frameworks */,
+				7B4498B9D88F06DA00438B1F5B00A40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED9A8C48B5D82023FF43631F4C182563 /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleSocial";
+			productName = "Pods-SimpleSocial";
+			productReference = 39DEBB5BAF006B8FFA302FB182378D4D /* Pods_SimpleSocial.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		60BE36D509B0BCD6F7B326DAD5059FAF /* Pods-SimpleSocial-SimpleSocialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66C11BBB1F673CE97368E77CC342A30 /* Build configuration list for PBXNativeTarget "Pods-SimpleSocial-SimpleSocialUITests" */;
+			buildPhases = (
+				C450593D5B92288608247AD989416485 /* Headers */,
+				09503A56A9FAE8AD6CEBE6B7539B5C5B /* Sources */,
+				ABF38A03FE8685A914B07A1A26E3453A /* Frameworks */,
+				F368880263CB82B2583D6B9365C8852F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98B26B2A08C2460F087F577819044D8 /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleSocial-SimpleSocialUITests";
+			productName = "Pods-SimpleSocial-SimpleSocialUITests";
+			productReference = 8750D54582FAD0399AA1CAA10F878557 /* Pods_SimpleSocial_SimpleSocialUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D86F5920FA3EF40E402E054BA9B9BC42 /* Pods-SimpleSocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F49707C613D7AB7216060AE620527B6D /* Build configuration list for PBXNativeTarget "Pods-SimpleSocialTests" */;
+			buildPhases = (
+				CE8EC9B4F694349ADB7F321A731E7B74 /* Headers */,
+				9EA6479A6A3605603DEA35C03075A56B /* Sources */,
+				DA64AFAF53EE6262B90518DCBD0EBE07 /* Frameworks */,
+				DDECBBFB534D3B776EEC94F7571707A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDC1A946107FE09C8DF742B726ECC05E /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleSocialTests";
+			productName = "Pods-SimpleSocialTests";
+			productReference = 0F40ED3455CB8C98C0793BC1D0050D1B /* Pods_SimpleSocialTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1250;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A6D038A762BD0060147923B44D1E81B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1978A2AA154647BC52908E2843A45F35 /* Pods-SimpleSocial */,
+				60BE36D509B0BCD6F7B326DAD5059FAF /* Pods-SimpleSocial-SimpleSocialUITests */,
+				D86F5920FA3EF40E402E054BA9B9BC42 /* Pods-SimpleSocialTests */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B4498B9D88F06DA00438B1F5B00A40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDECBBFB534D3B776EEC94F7571707A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F368880263CB82B2583D6B9365C8852F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09503A56A9FAE8AD6CEBE6B7539B5C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5452FC1872BE74C1C8B462EDF2F1816 /* Pods-SimpleSocial-SimpleSocialUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EA6479A6A3605603DEA35C03075A56B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B6F18F9C9E096A44780F188B19DB12 /* Pods-SimpleSocialTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC230A9161B668BE886AF3DB73FF2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3969E1F890B8D8834E8BDED50D24FA65 /* Pods-SimpleSocial-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A98B26B2A08C2460F087F577819044D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 661C3BFED78AEDF63F137A8052E9D339 /* PBXContainerItemProxy */;
+		};
+		ED9A8C48B5D82023FF43631F4C182563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 6169F6E633C8A9D9B7FCB0A1835036C5 /* PBXContainerItemProxy */;
+		};
+		EDC1A946107FE09C8DF742B726ECC05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SimpleSocial";
+			target = 1978A2AA154647BC52908E2843A45F35 /* Pods-SimpleSocial */;
+			targetProxy = 5132AA4377A9A1E2E1895D6F5B7556E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02AC080E73626EAD1BF39515D6F3F86F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20CE7D48518C212DF76648E1FCDE2DB5 /* Pods-SimpleSocial-SimpleSocialUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleSocial-SimpleSocialUITests/Pods-SimpleSocial-SimpleSocialUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleSocial-SimpleSocialUITests/Pods-SimpleSocial-SimpleSocialUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		352066D055B776674BFD14C3CB36C891 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160CE9C9947EA73AABBD4C094271BA82 /* Pods-SimpleSocialTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleSocialTests/Pods-SimpleSocialTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleSocialTests/Pods-SimpleSocialTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E1034C2ABCA74CEB7ACCD734A78B574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F88F921B7CF4735AE99F4721F2905B /* Pods-SimpleSocial.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleSocial/Pods-SimpleSocial-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleSocial/Pods-SimpleSocial.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		74FCC4B7A1CFCF3511C603338F5C43F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABB7389B0CCC77A047C18F471BB6C44 /* Pods-SimpleSocialTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleSocialTests/Pods-SimpleSocialTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleSocialTests/Pods-SimpleSocialTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A39C307FDE4F3BDBC64A4A42A80DCCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC468E3163A37452477ECAD65A57068D /* Pods-SimpleSocial.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleSocial/Pods-SimpleSocial-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleSocial/Pods-SimpleSocial.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AD81E62ACCB0B7A923FC8AA288F9921E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5E8AC10C3995998804E96B7AFA32E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740E34F321FC09D1B79EBF27AC2D0F16 /* Pods-SimpleSocial-SimpleSocialUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleSocial-SimpleSocialUITests/Pods-SimpleSocial-SimpleSocialUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleSocial-SimpleSocialUITests/Pods-SimpleSocial-SimpleSocialUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */,
+				AD81E62ACCB0B7A923FC8AA288F9921E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D158820C37A3433F16F1DD2B1F67F2F0 /* Build configuration list for PBXNativeTarget "Pods-SimpleSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E1034C2ABCA74CEB7ACCD734A78B574 /* Debug */,
+				A39C307FDE4F3BDBC64A4A42A80DCCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E66C11BBB1F673CE97368E77CC342A30 /* Build configuration list for PBXNativeTarget "Pods-SimpleSocial-SimpleSocialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02AC080E73626EAD1BF39515D6F3F86F /* Debug */,
+				D5E8AC10C3995998804E96B7AFA32E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F49707C613D7AB7216060AE620527B6D /* Build configuration list for PBXNativeTarget "Pods-SimpleSocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74FCC4B7A1CFCF3511C603338F5C43F8 /* Debug */,
+				352066D055B776674BFD14C3CB36C891 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
