@@ -21,48 +21,48 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
     func setupManager() {
         // Locations get
+        checkPermission()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.startMonitoringSignificantLocationChanges()
+        manager.distanceFilter = 0
         manager.startUpdatingLocation()
-        checkPermission()
     }
 
     func locationManager(_: CLLocationManager, didChangeAuthorization _: CLAuthorizationStatus) {}
 
     func locationManager(_: CLLocationManager, didUpdateLocations _: [CLLocation]) {}
 
-    func locationManager(_: CLLocationManager, didFailWithError _: Error) {}
+    func locationManager(_: CLLocationManager, didFailWithError error: Error) {
+        Logger.shared.log(error)
+    }
 
     // MARK: Private
 
     private var manager = CLLocationManager()
 
     private func checkPermission() {
-        if CLLocationManager.locationServicesEnabled() {
-            if #available(iOS 14, *) {
-                switch CLLocationManager().authorizationStatus {
-                case .denied:
-                    manager.requestAlwaysAuthorization()
-                    manager.requestWhenInUseAuthorization()
-                case .notDetermined, .restricted:
-                    break
-                case .authorizedAlways, .authorizedWhenInUse:
-                    break
-                @unknown default:
-                    break
-                }
-            } else {
-                switch CLLocationManager.authorizationStatus() {
-                case .denied:
-                    manager.requestAlwaysAuthorization()
-                    manager.requestWhenInUseAuthorization()
-                case .notDetermined, .restricted:
-                    break
-                case .authorizedAlways, .authorizedWhenInUse:
-                    break
-                @unknown default:
-                    break
-                }
+        if #available(iOS 14, *) {
+            switch manager.authorizationStatus {
+            case .denied, .notDetermined, .restricted:
+                manager.requestAlwaysAuthorization()
+                manager.requestWhenInUseAuthorization()
+            case .authorizedAlways, .authorizedWhenInUse:
+                break
+            @unknown default:
+                break
+            }
+        } else {
+            switch CLLocationManager.authorizationStatus() {
+            case .denied:
+                manager.requestAlwaysAuthorization()
+                manager.requestWhenInUseAuthorization()
+            case .notDetermined, .restricted:
+                break
+            case .authorizedAlways, .authorizedWhenInUse:
+                break
+            @unknown default:
+                break
             }
         }
     }

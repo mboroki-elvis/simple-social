@@ -33,8 +33,8 @@ public enum StyleHelper {
         }
     }()
 
-    static var defaultFont = UIFont(name: "ProximaNovaRegular", size: 16) ?? UIFont.systemFont(ofSize: 16)
-    static var defaultBoldFont = UIFont(name: "ProximaNovaBold", size: 16) ?? UIFont.systemFont(ofSize: 16)
+    static var defaultFont = UIFont(name: "ProximaNova-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
+    static var defaultBoldFont = UIFont(name: "ProximaNova-Bold", size: 16) ?? UIFont.systemFont(ofSize: 16)
 
     static func setStyle() {
         UITabBar.appearance().tintColor = itemTintColor

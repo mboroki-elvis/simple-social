@@ -41,7 +41,7 @@ class CommentCell: UITableViewCell {
                 att.append(title)
                 textLabel?.attributedText = att
             }
-            detailTextLabel?.text = source.body
+            detailTextLabel?.text = source.body?.condensed
         }
     }
 }

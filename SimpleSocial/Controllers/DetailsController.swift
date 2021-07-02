@@ -208,16 +208,20 @@ extension DetailsController: UserActionDelegate {
     }
 }
 
-extension DetailsController: MKMapViewDelegate, CLLocationManagerDelegate {
+extension DetailsController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseId = "annotation"
-        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-        if anView == nil {
-            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            anView?.canShowCallout = true
-        } else {
-            anView?.annotation = annotation
+        guard !(annotation is MKUserLocation) else {
+            return nil
         }
+        let anView = mapView.dequeueReusableAnnotationView(withIdentifier: MKAnnotationView.identifier, for: annotation)
+        anView.annotation = annotation
+        anView.canShowCallout = true
+        anView.displayPriority = .required
+        debugPrint(anView)
         return anView
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        mapView.setCenter(userLocation.coordinate, animated: true)
     }
 }

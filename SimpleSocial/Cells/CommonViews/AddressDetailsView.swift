@@ -17,6 +17,7 @@ class AddressDetailsView: UIView {
         addSubview(mapView)
         mapView.center = center
         mapView.showsUserLocation = true
+        mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKAnnotationView.identifier)
         mapView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         mapView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         mapView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
