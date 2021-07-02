@@ -16,8 +16,8 @@ class PostCell: UITableViewCell {
         textLabel?.numberOfLines = .zero
         textLabel?.textColor = StyleHelper.itemTintColor
         textLabel?.font = UIFont.font(weight: .bold, ofSize: 18)
-        detailTextLabel?.numberOfLines = .zero
         detailTextLabel?.textColor = .gray
+        detailTextLabel?.numberOfLines = .zero
         detailTextLabel?.font = UIFont.font(weight: .regular, ofSize: 14)
     }
 
