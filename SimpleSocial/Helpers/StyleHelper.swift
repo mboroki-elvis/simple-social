@@ -33,17 +33,19 @@ public enum StyleHelper {
         }
     }()
 
-    static var defaultFont = UIFont(name: "ProximaNovaRegular", size: 16) ?? UIFont.systemFont(ofSize: 16)
-    static var defaultBoldFont = UIFont(name: "ProximaNovaBold", size: 16) ?? UIFont.systemFont(ofSize: 16)
+    static var defaultFont = UIFont(name: "ProximaNova-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
+    static var defaultBoldFont = UIFont(name: "ProximaNova-Bold", size: 16) ?? UIFont.systemFont(ofSize: 16)
 
     static func setStyle() {
         UITabBar.appearance().tintColor = itemTintColor
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: defaultBoldFont]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont.font(weight: .bold, ofSize: 20)]
         UINavigationBar.appearance().barTintColor = .white
         UINavigationBar.appearance().tintColor = itemTintColor
         UITableView.appearance().backgroundColor = backgroundColor
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: itemTintColor], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: itemTintColor, NSAttributedString.Key.font: defaultBoldFont], for: .normal)
         UITableView.appearance().backgroundColor = backgroundColor
         UICollectionView.appearance().backgroundColor = backgroundColor
+        UINavigationBar.appearance().isTranslucent = true
+        UINavigationBar.appearance().shadowImage = UIImage()
     }
 }

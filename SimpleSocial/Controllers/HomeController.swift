@@ -35,12 +35,14 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
         tableView.dataSource = dataSource
         applySnapshot(animatingDifferences: true)
         setupDataController()
-        setupData()
+        setupDataSource()
+        tableView.tableFooterView = UIView()
         definesPresentationContext = true
         tableView.accessibilityIdentifier = "HomeScreen"
-        navigationItem.searchController = searchController
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationController?.navigationBar.prefersLargeTitles = true
         tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.identifier)
     }
 
@@ -112,7 +114,7 @@ class HomeController: UITableViewController, UISearchResultsUpdating {
         }
     }
 
-    private func setupData() {
+    private func setupDataSource() {
         if let controller = fetchedResultsController, controller.fetchedObjects?.count == .zero {
             getData()
         }

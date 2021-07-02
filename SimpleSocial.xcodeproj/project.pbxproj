@@ -18,9 +18,9 @@
 		EE1E25CD268B0C5B00E652ED /* Simple_SocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25CC268B0C5B00E652ED /* Simple_SocialTests.swift */; };
 		EE1E25D8268B0C5B00E652ED /* Simple_SocialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25D7268B0C5B00E652ED /* Simple_SocialUITests.swift */; };
 		EE1E25E6268B1C7C00E652ED /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */; };
-		EE1E25E8268B1E6C00E652ED /* ProximaNovaBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25E7268B1E6C00E652ED /* ProximaNovaBold.otf */; };
-		EE1E25EA268B1E9600E652ED /* ProximaNovaCondensedLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25E9268B1E9600E652ED /* ProximaNovaCondensedLight.otf */; };
-		EE1E25EC268B1EA400E652ED /* ProximaNovaRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25EB268B1EA400E652ED /* ProximaNovaRegular.otf */; };
+		EE1E25E8268B1E6C00E652ED /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25E7268B1E6C00E652ED /* ProximaNova-Bold.otf */; };
+		EE1E25EA268B1E9600E652ED /* ProximaNovaCond-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25E9268B1E9600E652ED /* ProximaNovaCond-Light.otf */; };
+		EE1E25EC268B1EA400E652ED /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE1E25EB268B1EA400E652ED /* ProximaNova-Regular.otf */; };
 		EE1E25EF268B26ED00E652ED /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25EE268B26ED00E652ED /* Posts.swift */; };
 		EE1E25F2268B272B00E652ED /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F1268B272A00E652ED /* Users.swift */; };
 		EE1E25F4268B275800E652ED /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E25F3268B275800E652ED /* Comments.swift */; };
@@ -96,9 +96,9 @@
 		EE1E25D7268B0C5B00E652ED /* Simple_SocialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_SocialUITests.swift; sourceTree = "<group>"; };
 		EE1E25D9268B0C5B00E652ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1E25E5268B1C7C00E652ED /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
-		EE1E25E7268B1E6C00E652ED /* ProximaNovaBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNovaBold.otf; sourceTree = "<group>"; };
-		EE1E25E9268B1E9600E652ED /* ProximaNovaCondensedLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNovaCondensedLight.otf; sourceTree = "<group>"; };
-		EE1E25EB268B1EA400E652ED /* ProximaNovaRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNovaRegular.otf; sourceTree = "<group>"; };
+		EE1E25E7268B1E6C00E652ED /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		EE1E25E9268B1E9600E652ED /* ProximaNovaCond-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Light.otf"; sourceTree = "<group>"; };
+		EE1E25EB268B1EA400E652ED /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		EE1E25EE268B26ED00E652ED /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		EE1E25F1268B272A00E652ED /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		EE1E25F3268B275800E652ED /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
@@ -246,9 +246,9 @@
 		EE1E25ED268B1EAC00E652ED /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EE1E25E7268B1E6C00E652ED /* ProximaNovaBold.otf */,
-				EE1E25E9268B1E9600E652ED /* ProximaNovaCondensedLight.otf */,
-				EE1E25EB268B1EA400E652ED /* ProximaNovaRegular.otf */,
+				EE1E25E7268B1E6C00E652ED /* ProximaNova-Bold.otf */,
+				EE1E25E9268B1E9600E652ED /* ProximaNovaCond-Light.otf */,
+				EE1E25EB268B1EA400E652ED /* ProximaNova-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -451,9 +451,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1E25EA268B1E9600E652ED /* ProximaNovaCondensedLight.otf in Resources */,
-				EE1E25EC268B1EA400E652ED /* ProximaNovaRegular.otf in Resources */,
-				EE1E25E8268B1E6C00E652ED /* ProximaNovaBold.otf in Resources */,
+				EE1E25EA268B1E9600E652ED /* ProximaNovaCond-Light.otf in Resources */,
+				EE1E25EC268B1EA400E652ED /* ProximaNova-Regular.otf in Resources */,
+				EE1E25E8268B1E6C00E652ED /* ProximaNova-Bold.otf in Resources */,
 				EE1E25C2268B0C5B00E652ED /* LaunchScreen.storyboard in Resources */,
 				EE1E25BF268B0C5B00E652ED /* Assets.xcassets in Resources */,
 			);

@@ -14,6 +14,13 @@ extension UITableViewCell {
     }
 }
 
+
+extension MKAnnotationView {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
+
 extension MKMapView {
     func centerToLocation(
         _ location: CLLocation,
@@ -32,13 +39,19 @@ extension UIFont {
     class func font(weight: Weight = .regular, ofSize: CGFloat = 14) -> UIFont {
         switch weight {
         case .bold:
-            return UIFont(name: "ProximaNovaBold", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
+            return UIFont(name: "ProximaNova-Bold", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
         case .light:
-            return UIFont(name: "ProximaNovaCondensedLight", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
+            return UIFont(name: "ProximaNovaCond-Light", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
         case .regular:
-            return UIFont(name: "ProximaNovaRegular", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
+            return UIFont(name: "ProximaNova-Regular", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
         default:
-            return UIFont(name: "ProximaNovaRegular", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
+            return UIFont(name: "ProximaNova-Regular", size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
         }
     }
+}
+
+extension String {
+     var condensed: String {
+         return replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil)
+     }
 }
