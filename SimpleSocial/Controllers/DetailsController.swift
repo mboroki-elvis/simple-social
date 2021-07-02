@@ -47,6 +47,7 @@ class DetailsController: UITableViewController {
         super.viewDidLoad()
         tableView.dataSource = dataSource
         tableView.tableFooterView = UIView()
+        tableView.accessibilityIdentifier = "Post_Details_Screen"
         tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.identifier)
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.identifier)
         tableView.register(CommentCell.self, forCellReuseIdentifier: CommentCell.identifier)
@@ -86,6 +87,14 @@ class DetailsController: UITableViewController {
 
     override func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == .zero ? .leastNonzeroMagnitude : UITableView.automaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .leastNonzeroMagnitude
     }
 
     // MARK: Private
@@ -208,16 +217,20 @@ extension DetailsController: UserActionDelegate {
     }
 }
 
-extension DetailsController: MKMapViewDelegate, CLLocationManagerDelegate {
+extension DetailsController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseId = "annotation"
-        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-        if anView == nil {
-            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            anView?.canShowCallout = true
-        } else {
-            anView?.annotation = annotation
+        guard !(annotation is MKUserLocation) else {
+            return nil
         }
+        let anView = mapView.dequeueReusableAnnotationView(withIdentifier: MKAnnotationView.identifier, for: annotation)
+        anView.annotation = annotation
+        anView.canShowCallout = true
+        anView.displayPriority = .required
+        debugPrint(anView)
         return anView
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        mapView.setCenter(userLocation.coordinate, animated: true)
     }
 }

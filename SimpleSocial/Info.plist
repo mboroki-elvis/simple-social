@@ -14,9 +14,9 @@
 	<string>For Complete app performance</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ProximaNovaBold.otf</string>
-		<string>ProximaNovaCondensedLight.otf</string>
-		<string>ProximaNovaRegular.otf</string>
+		<string>ProximaNova-Bold.otf</string>
+		<string>ProximaNovaCond-Light.otf</string>
+		<string>ProximaNova-Regular.otf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

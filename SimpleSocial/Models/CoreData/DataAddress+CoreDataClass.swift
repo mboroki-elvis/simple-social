@@ -16,6 +16,7 @@ public class DataAddress: NSManagedObject {
         guard let lat = lat, let lng = lng, let doubleLat = Double(lat), let doubleLng = Double(lng) else {
             return nil
         }
+        debugPrint("user location: \(doubleLat) , \(doubleLng)")
         return CLLocation(latitude: doubleLat, longitude: doubleLng)
     }
 }

@@ -33,8 +33,8 @@ class PostCell: UITableViewCell {
             guard let source = dataSourceItem else {
                 return
             }
-            textLabel?.text = source.title
-            detailTextLabel?.text = source.body
+            textLabel?.text = source.title?.capitalized
+            detailTextLabel?.text = source.body?.condensed
         }
     }
 }

@@ -9,7 +9,10 @@ import MapKit
 import UIKit
 
 enum UserAction: Int {
-    case name = 0, email, phone, website
+    case name = 0
+    case email
+    case phone
+    case website
 }
 
 protocol UserActionDelegate: AnyObject {
@@ -78,11 +81,11 @@ class UserCell: UITableViewCell {
             contactView.dataSourceItem = source
             companyView.dataSourceItem = source.company
             if let location = source.address?.location {
-                addressView.mapView.centerToLocation(location)
                 let annotation = MKPointAnnotation()
                 annotation.title = source.address?.city
                 annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
                 addressView.mapView.addAnnotation(annotation)
+                addressView.mapView.centerToLocation(location)
             }
         }
     }
